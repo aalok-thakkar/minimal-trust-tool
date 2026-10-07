@@ -1,5 +1,8 @@
 # minimal-trust-tool
 
+[![CI](https://github.com/aalok-thakkar/minimal-trust-tool/actions/workflows/ci.yml/badge.svg)](https://github.com/aalok-thakkar/minimal-trust-tool/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 The OCaml tool for the paper *Trust a Few: The Weakest Assumptions a Protocol Needs*
 (Bhumika Mittal and Aalok Thakkar; extended version on arXiv; conference version
 *The Trust a Protocol Needs*, ICISS 2026).

@@ -1,0 +1,157 @@
+{
+ "name": "woolam",
+ "meta": {
+  "name": [
+   "woolam"
+  ],
+  "source": [
+   "tst/woolam.scm (defprotocol woolam), protocol text unchanged"
+  ],
+  "goal": [
+   "written: responder agreement with the initiator on (a, s, n)"
+  ],
+  "note": [
+   "role declarations non-orig (ltk a s) [init], non-orig (ltk b s) and uniq-orig n [resp] stay in sigma"
+  ],
+  "excluded": [
+   "|U| = 1 after removing role-declared atoms"
+  ]
+ },
+ "U": {
+  "non_ltk_as": "(non (ltk a s))"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_as"
+    ],
+    "time": 0.0164,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 4,
+    "warnings": []
+   }
+  ],
+  "n_points": 2,
+  "all_complete": true,
+  "total_time": 0.035,
+  "max_time": 0.018,
+  "monotone": true,
+  "n_sufficient": 1,
+  "W": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "A": [
+   [
+    "non_ltk_as"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 1,
+  "cpsa_goal_time": 0.035,
+  "cpsa_replay_time": 0.018,
+  "wall": 0.056,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 1,
+  "cpsa_goal_time": 0.035,
+  "cpsa_replay_time": 0.017,
+  "wall": 0.055,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 1,
+  "cpsa_goal_time": 0.035,
+  "cpsa_replay_time": 0.017,
+  "wall": 0.055,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 1,
+  "cpsa_goal_time": 0.033,
+  "cpsa_replay_time": 0.017,
+  "wall": 0.053,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

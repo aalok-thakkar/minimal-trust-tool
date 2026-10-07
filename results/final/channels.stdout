@@ -1,0 +1,65 @@
+== Needham-Schroeder (as_found witnesses)
+   U = {Non(sk_A), Non(sk_B)}
+   H = {{}}
+   W = false
+   calls: 2 distinct, 2 queries; brute force over 2^2 agrees: true; non-principal attack states over the lattice: 0; time 0.001s
+   under {Non(sk_A), Non(sk_B)}: stops {}: [main] Init(A,I) send {<Na_1, A>}_pk_I on A->I; Resp(B,A)* recv {<Na_1, A>}_pk_B on A->B; Resp(B,A)* send {<Na_1, Nb_2>}_pk_A on B->A; Init(A,I) recv {<Na_1, Nb_2>}_pk_A on I->A; Init(A,I) send {Nb_2}_pk_I on A->I; Resp(B,A)* recv {Nb_2}_pk_B on A->B
+   2 instances per role: W = false (unchanged), 2 calls, 414 states, 0.0s
+
+== Lowe's fix (NSL) (as_found witnesses)
+   U = {Non(sk_A), Non(sk_B)}
+   H = {Non(sk_A)}
+   W = {Non(sk_A)}
+   calls: 2 distinct, 2 queries; brute force over 2^2 agrees: true; non-principal attack states over the lattice: 0; time 0.002s
+   under {Non(sk_A), Non(sk_B)}: achieves
+   2 instances per role: W = {Non(sk_A)} (unchanged), 2 calls, 404625 states, 1.7s
+
+== NSPK, keys (least witnesses) (least witnesses)
+   U = {Non(sk_A), Non(sk_B)}
+   H = {{}}
+   W = false
+   calls: 1 distinct, 1 queries; brute force over 2^2 agrees: true; non-principal attack states over the lattice: 0; time 0.001s
+   under {Non(sk_A), Non(sk_B)}: stops {}: [main] Init(A,I) send {<Na_1, A>}_pk_I on A->I; Resp(B,A)* recv {<Na_1, A>}_pk_B on A->B; Resp(B,A)* send {<Na_1, Nb_2>}_pk_A on B->A; Init(A,I) recv {<Na_1, Nb_2>}_pk_A on I->A; Init(A,I) send {Nb_2}_pk_I on A->I; Resp(B,A)* recv {Nb_2}_pk_B on A->B
+   2 instances per role: W = false (unchanged), 2 calls, 414 states, 0.0s
+
+== NSL, keys (least witnesses) (least witnesses)
+   U = {Non(sk_A), Non(sk_B)}
+   H = {Non(sk_A)}
+   W = {Non(sk_A)}
+   calls: 2 distinct, 2 queries; brute force over 2^2 agrees: true; non-principal attack states over the lattice: 0; time 0.005s
+   under {Non(sk_A), Non(sk_B)}: achieves
+   2 instances per role: W = {Non(sk_A)} (unchanged), 2 calls, 404625 states, 1.7s
+
+== NSPK with channels (least witnesses)
+   U = {Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}
+   H = {auth(A->B), conf(B->A)}
+   W = {auth(A->B)}; {conf(B->A)}
+   calls: 3 distinct, 3 queries; brute force over 2^6 agrees: true; non-principal attack states over the lattice: 0; time 0.007s
+   under {Non(sk_A), Non(sk_B)}: stops {auth(A->B), conf(B->A)}: [main] Init(A,I) send {<Na_1, A>}_pk_I on A->I; Resp(B,A)* recv {<Na_1, A>}_pk_B on A->B; Resp(B,A)* send {<Na_1, Nb_2>}_pk_A on B->A; Init(A,I) recv {<Na_1, Nb_2>}_pk_A on I->A; Init(A,I) send {Nb_2}_pk_I on A->I; Resp(B,A)* recv {Nb_2}_pk_B on A->B
+   2 instances per role: W = {conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)} (CHANGED), 7 calls, 482837 states, 2.3s
+
+== NSL with channels (least witnesses)
+   U = {Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}
+   H = {Non(sk_A), auth(A->B), conf(B->A)}
+   W = {Non(sk_A)}; {auth(A->B)}; {conf(B->A)}
+   calls: 4 distinct, 4 queries; brute force over 2^6 agrees: true; non-principal attack states over the lattice: 0; time 0.009s
+   under {Non(sk_A), Non(sk_B)}: achieves
+   2 instances per role: W = {Non(sk_A)}; {conf(B->A)}; {auth(A->B), auth(B->A)} (CHANGED), 6 calls, 817327 states, 4.4s
+
+== NSPK with channels, hijack (least witnesses)
+   U = {Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}
+   H = {auth(A->B)}
+   W = {auth(A->B)}
+   calls: 2 distinct, 2 queries; brute force over 2^6 agrees: true; non-principal attack states over the lattice: 0; time 0.005s
+   under {Non(sk_A), Non(sk_B)}: stops {auth(A->B)}: [main] Init(A,I) send {<Na_1, A>}_pk_I on A->I; Resp(B,A)* recv {<Na_1, A>}_pk_B on A->B; Resp(B,A)* send {<Na_1, Nb_2>}_pk_A on B->A; Init(A,I) recv {<Na_1, Nb_2>}_pk_A on I->A; Init(A,I) send {Nb_2}_pk_I on A->I; Resp(B,A)* recv {Nb_2}_pk_B on A->B
+   2 instances per role: W = {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}; {auth(A->B), conf(B->A)} (CHANGED), 7 calls, 147942 states, 0.7s
+
+== NSL with channels, hijack (least witnesses)
+   U = {Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}
+   H = {Non(sk_A), auth(A->B), conf(B->A)}
+   W = {Non(sk_A)}; {auth(A->B)}; {conf(B->A)}
+   calls: 4 distinct, 4 queries; brute force over 2^6 agrees: true; non-principal attack states over the lattice: 0; time 0.009s
+   under {Non(sk_A), Non(sk_B)}: achieves
+   2 instances per role: W = {Non(sk_A)}; {conf(B->A)}; {auth(A->B), auth(B->A)} (CHANGED), 6 calls, 817327 states, 4.5s
+
+wrote results/final/channels.csv (8 rows)

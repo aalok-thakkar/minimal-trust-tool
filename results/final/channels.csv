@@ -1,0 +1,9 @@
+row,U,witness_mode,hijack,W,H,distinct_calls,loop_queries,brute_force_agrees,nonprincipal_attack_states,W_matches_paper,time_s,W_2_instances,W_changed_at_2_instances,states_2_instances
+nspk,"{Non(sk_A), Non(sk_B)}",as_found,false,false,{{}},2,2,true,0,true,0.0010,false,false,414
+nsl,"{Non(sk_A), Non(sk_B)}",as_found,false,{Non(sk_A)},{Non(sk_A)},2,2,true,0,true,0.0016,{Non(sk_A)},false,404625
+nspk_keys_least,"{Non(sk_A), Non(sk_B)}",least,false,false,{{}},1,1,true,0,true,0.0015,false,false,414
+nsl_keys_least,"{Non(sk_A), Non(sk_B)}",least,false,{Non(sk_A)},{Non(sk_A)},2,2,true,0,true,0.0046,{Non(sk_A)},false,404625
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,false,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",3,3,true,0,true,0.0069,"{conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}",true,482837
+nsl_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,false,{Non(sk_A)}; {auth(A->B)}; {conf(B->A)},"{Non(sk_A), auth(A->B), conf(B->A)}",4,4,true,0,true,0.0091,"{Non(sk_A)}; {conf(B->A)}; {auth(A->B), auth(B->A)}",true,817327
+nspk_channels_hijack,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,true,{auth(A->B)},{auth(A->B)},2,2,true,0,true,0.0049,"{Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}; {auth(A->B), conf(B->A)}",true,147942
+nsl_channels_hijack,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,true,{Non(sk_A)}; {auth(A->B)}; {conf(B->A)},"{Non(sk_A), auth(A->B), conf(B->A)}",4,4,true,0,n/a,0.0094,"{Non(sk_A)}; {conf(B->A)}; {auth(A->B), auth(B->A)}",true,817327

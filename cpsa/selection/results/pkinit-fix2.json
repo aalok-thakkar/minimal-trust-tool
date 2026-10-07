@@ -1,0 +1,182 @@
+{
+ "name": "pkinit-fix2",
+ "meta": {
+  "name": [
+   "pkinit-fix2"
+  ],
+  "source": [
+   "not shipped in tst/: adopted fix (server signs a hash of the client request), as in artifact/pkinit_mintrust.py; re-derived from artifact/pkinit_mintrust.py"
+  ],
+  "goal": [
+   "written (existing row): client authenticates the server, agreement with an auth strand on (c, as, k)"
+  ],
+  "note": [
+   "role declarations uniq-orig n1 n2 [client] and uniq-orig k ak [auth] stay in sigma"
+  ]
+ },
+ "U": {
+  "non_as": "(non (privk as))",
+  "non_c": "(non (privk c))"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_as"
+    ],
+    "time": 0.0167,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_c"
+    ],
+    "time": 0.0199,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_as",
+     "non_c"
+    ],
+    "time": 0.019,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 5,
+    "warnings": []
+   }
+  ],
+  "n_points": 4,
+  "all_complete": true,
+  "total_time": 0.074,
+  "max_time": 0.02,
+  "monotone": true,
+  "n_sufficient": 2,
+  "W": [
+   [
+    "non_as"
+   ]
+  ],
+  "A": [
+   [
+    "non_as"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 2,
+  "cpsa_goal_time": 0.038,
+  "cpsa_replay_time": 0.037,
+  "wall": 0.078,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_as"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 2,
+  "cpsa_goal_time": 0.053,
+  "cpsa_replay_time": 0.035,
+  "wall": 0.093,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_as"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 2,
+  "cpsa_goal_time": 0.036,
+  "cpsa_replay_time": 0.035,
+  "wall": 0.075,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_as"
+   ]
+  ],
+  "H": [
+   [
+    "non_as"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 2,
+  "cpsa_goal_time": 0.051,
+  "cpsa_replay_time": 0.037,
+  "wall": 0.092,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

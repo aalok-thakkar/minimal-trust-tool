@@ -1,0 +1,353 @@
+{
+ "name": "isofix",
+ "meta": {
+  "name": [
+   "isofix"
+  ],
+  "source": [
+   "tst/isoreject-corrected.scm (defprotocol isofix), protocol text unchanged"
+  ],
+  "goal": [
+   "written: responder agreement with the initiator on (a, b, nb) (same goal as isoreject)"
+  ]
+ },
+ "U": {
+  "non_privk_a": "(non (privk a))",
+  "non_privk_b": "(non (privk b))",
+  "uniq_na": "(uniq na)",
+  "uniq_nc": "(uniq nc)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0191,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a"
+    ],
+    "time": 0.0188,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b"
+    ],
+    "time": 0.0175,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_na"
+    ],
+    "time": 0.0193,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_nc"
+    ],
+    "time": 0.0178,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b"
+    ],
+    "time": 0.0181,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_na"
+    ],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_nc"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_na"
+    ],
+    "time": 0.0189,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_nc"
+    ],
+    "time": 0.0191,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_na",
+     "uniq_nc"
+    ],
+    "time": 0.0195,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_na"
+    ],
+    "time": 0.0191,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_nc"
+    ],
+    "time": 0.0163,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_na",
+     "uniq_nc"
+    ],
+    "time": 0.0181,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_na",
+     "uniq_nc"
+    ],
+    "time": 0.0187,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_na",
+     "uniq_nc"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   }
+  ],
+  "n_points": 16,
+  "all_complete": true,
+  "total_time": 0.296,
+  "max_time": 0.019,
+  "monotone": true,
+  "n_sufficient": 8,
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "A": [
+   [
+    "non_privk_a"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.038,
+  "cpsa_replay_time": 0.074,
+  "wall": 0.116,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.058,
+  "cpsa_replay_time": 0.074,
+  "wall": 0.137,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.037,
+  "cpsa_replay_time": 0.074,
+  "wall": 0.115,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.057,
+  "cpsa_replay_time": 0.075,
+  "wall": 0.137,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

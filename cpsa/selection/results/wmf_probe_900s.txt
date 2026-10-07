@@ -1,0 +1,22 @@
+finished in 200.3s
+tail:  t))))
+      (send (enc ta-3 b k (ltk a t))))
+    ((recv (cat a (enc ta-5 b k (ltk a t))))
+      (send (enc ta-4 a k (ltk b t))))
+    ((recv (cat b (enc ta-6 a k (ltk b t))))
+      (send (enc ta-5 b k (ltk a t))))
+    ((recv (cat a (enc ta-7 b k (ltk a t))))
+      (send (enc ta-6 a k (ltk b t))))
+    ((recv (cat b (enc ta-8 a k (ltk b t))))
+      (send (enc ta-7 b k (ltk a t))))
+    ((recv (cat a (enc ta-9 b k (ltk a t))))
+      (send (enc ta-8 a k (ltk b t)))))
+  (label 22)
+  (parent 20)
+  (unrealized (11 0))
+  (aborted)
+  (maps ((0) ((a a) (b b) (t t) (k k) (tb tb))))
+  (comment "aborted"))
+
+stderr: Strand bound exceeded
+

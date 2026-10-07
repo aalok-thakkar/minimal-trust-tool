@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "minimal-trust-tool"
+abstract: "Computes the weakest trust assumptions a security protocol needs for a goal, by a counterexample-guided loop over a protocol verifier."
+authors:
+  - family-names: Mittal
+    given-names: Bhumika
+  - family-names: Thakkar
+    given-names: Aalok
+license: MIT
+repository-code: "https://github.com/aalok-thakkar/minimal-trust-tool"
+preferred-citation:
+  type: article
+  title: "Trust a Few: The Weakest Assumptions a Protocol Needs"
+  authors:
+    - family-names: Mittal
+      given-names: Bhumika
+    - family-names: Thakkar
+      given-names: Aalok
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:XXXX.XXXXX"
+      description: "arXiv identifier (placeholder until the preprint is posted)"
+references:
+  - type: conference-paper
+    title: "The Trust a Protocol Needs"
+    authors:
+      - family-names: Mittal
+        given-names: Bhumika
+      - family-names: Thakkar
+        given-names: Aalok
+    year: 2026
+    conference:
+      name: "International Conference on Information Systems Security (ICISS 2026)"

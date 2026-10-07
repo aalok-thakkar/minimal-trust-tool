@@ -1,0 +1,30 @@
+=== isoreject  U=['non_privk_a', 'non_privk_b', 'uniq_na', 'uniq_nc']
+  T={}: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_privk_a']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_privk_b']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_na']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_nc']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_privk_a', 'non_privk_b']: fails  [0.02s, shapes=2, skeletons=4]
+  T=['non_privk_a', 'uniq_na']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_privk_a', 'uniq_nc']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_privk_b', 'uniq_na']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_privk_b', 'uniq_nc']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_na', 'uniq_nc']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_privk_a', 'non_privk_b', 'uniq_na']: fails  [0.02s, shapes=2, skeletons=4]
+  T=['non_privk_a', 'non_privk_b', 'uniq_nc']: fails  [0.02s, shapes=2, skeletons=4]
+  T=['non_privk_a', 'uniq_na', 'uniq_nc']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_privk_b', 'uniq_na', 'uniq_nc']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_privk_a', 'non_privk_b', 'uniq_na', 'uniq_nc']: fails  [0.02s, shapes=2, skeletons=4]
+  lattice: 16 points, 0.30s total, max 0.02s, complete=True, W=[], A=[[]], monotone=True
+     O({}) = fails: shape label 0, stops(x) = ['non_privk_a']  checks: {'non_privk_a': 'unrealized', 'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+     O(['non_privk_a']) = fails: shape label 2, stops(x) = {}  checks: {'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+  loop[ref_as_found]: {'W': [], 'H': [[]], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 7, 'cpsa_goal_time': 0.036, 'cpsa_replay_time': 0.128, 'wall': 0.171, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_privk_a']  checks: {'non_privk_a': 'unrealized', 'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+     O(['non_privk_a', 'non_privk_b', 'uniq_na', 'uniq_nc']) = fails: shape label 2, stops(x) = {}  checks: {}
+  loop[ref_shrink]: {'W': [], 'H': [[]], 'distinct_calls': 2, 'total_calls': 1, 'shrink_calls': 1, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 4, 'cpsa_goal_time': 0.038, 'cpsa_replay_time': 0.073, 'wall': 0.115, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_privk_a']  checks: {'non_privk_a': 'unrealized', 'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+     O(['non_privk_a']) = fails: shape label 2, stops(x) = {}  checks: {'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+  loop[fixed_as_found]: {'W': [], 'H': [[]], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 7, 'cpsa_goal_time': 0.037, 'cpsa_replay_time': 0.128, 'wall': 0.171, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_privk_a']  checks: {'non_privk_a': 'unrealized', 'non_privk_b': 'realized', 'uniq_na': 'realized', 'uniq_nc': 'realized'}
+     O(['non_privk_a', 'non_privk_b', 'uniq_na', 'uniq_nc']) = fails: shape label 2, stops(x) = {}  checks: {}
+  loop[fixed_shrink]: {'W': [], 'H': [[]], 'distinct_calls': 2, 'total_calls': 1, 'shrink_calls': 1, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 4, 'cpsa_goal_time': 0.037, 'cpsa_replay_time': 0.075, 'wall': 0.117, 'agrees': True, 'H_equals_A': True}

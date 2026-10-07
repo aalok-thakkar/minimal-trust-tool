@@ -1,0 +1,31 @@
+row,U,witness_mode,shrink,W,H,distinct_calls,loop_queries,shrink_calls,H_plus_W,calls_within_H_plus_W,states_explored,max_states_one_call,nonprincipal_witnesses,brute_force_agrees,W_matches_paper,python_reference_mode,time_median_s,time_iqr_s,reps
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",as_found,false,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},5,5,0,3,false,25981,9889,0,true,true,false,0.0364,0.0002,5
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",as_found,true,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},6,3,4,3,false,32162,9889,0,true,true,false,0.0431,0.0002,5
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",pruned,false,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},3,3,0,3,true,19778,9889,0,true,true,true,0.0291,0.0002,5
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",pruned,true,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},4,3,1,3,false,25959,9889,0,true,true,false,0.0360,0.0001,5
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",least,false,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},3,3,0,3,true,57464,26504,0,true,true,false,0.0758,0.0004,5
+signed_cr,"{Non(sk_A), Non(sk_B), Unq(N)}",least,true,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},4,3,1,3,false,63645,26504,0,true,true,false,0.0825,0.0002,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",as_found,false,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",4,4,0,4,true,18565,6192,0,true,true,false,0.0325,0.0002,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",as_found,true,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",5,4,3,4,false,24746,6192,0,true,true,false,0.0393,0.0001,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",pruned,false,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",4,4,0,4,true,18565,6192,0,true,true,true,0.0326,0.0002,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",pruned,true,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",5,4,3,4,false,24746,6192,0,true,true,false,0.0394,0.0002,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",least,false,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",4,4,0,4,true,53854,26348,0,true,true,false,0.0930,0.0002,5
+two_key,"{Non(k1), Non(k2), Unq(N)}",least,true,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",5,4,3,4,false,60035,26348,0,true,true,false,0.0997,0.0017,5
+nspk,"{Non(sk_A), Non(sk_B)}",as_found,false,false,{{}},2,2,0,1,false,851,847,0,true,true,true,0.0008,0.0000,5
+nspk,"{Non(sk_A), Non(sk_B)}",as_found,true,false,{{}},2,1,1,1,false,131,127,0,true,true,false,0.0002,0.0001,5
+nspk,"{Non(sk_A), Non(sk_B)}",pruned,false,false,{{}},2,2,0,1,false,851,847,0,true,true,false,0.0008,0.0000,5
+nspk,"{Non(sk_A), Non(sk_B)}",pruned,true,false,{{}},2,1,1,1,false,131,127,0,true,true,false,0.0002,0.0000,5
+nspk,"{Non(sk_A), Non(sk_B)}",least,false,false,{{}},1,1,0,1,true,1581,1581,0,true,true,false,0.0014,0.0001,5
+nspk,"{Non(sk_A), Non(sk_B)}",least,true,false,{{}},1,1,0,1,true,1581,1581,0,true,true,false,0.0014,0.0000,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",as_found,false,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",4,4,0,3,false,3005,1540,0,true,true,false,0.0041,0.0001,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",as_found,true,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",6,3,3,3,false,2581,1540,0,true,true,false,0.0033,0.0001,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",pruned,false,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",4,4,0,3,false,3005,1540,0,true,true,false,0.0041,0.0001,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",pruned,true,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",6,3,3,3,false,2581,1540,0,true,true,false,0.0033,0.0001,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,false,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",3,3,0,3,true,5142,2988,0,true,true,true,0.0067,0.0001,5
+nspk_channels,"{Non(sk_A), Non(sk_B), auth(A->B), auth(B->A), conf(A->B), conf(B->A)}",least,true,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",5,3,2,3,false,5438,2988,0,true,true,false,0.0069,0.0001,5
+nsl,"{Non(sk_A), Non(sk_B)}",as_found,false,{Non(sk_A)},{Non(sk_A)},2,2,0,2,true,1544,1540,0,true,true,true,0.0015,0.0000,5
+nsl,"{Non(sk_A), Non(sk_B)}",as_found,true,{Non(sk_A)},{Non(sk_A)},3,2,1,2,false,1770,1540,0,true,true,false,0.0018,0.0000,5
+nsl,"{Non(sk_A), Non(sk_B)}",pruned,false,{Non(sk_A)},{Non(sk_A)},2,2,0,2,true,1544,1540,0,true,true,false,0.0016,0.0001,5
+nsl,"{Non(sk_A), Non(sk_B)}",pruned,true,{Non(sk_A)},{Non(sk_A)},3,2,1,2,false,1770,1540,0,true,true,false,0.0018,0.0000,5
+nsl,"{Non(sk_A), Non(sk_B)}",least,false,{Non(sk_A)},{Non(sk_A)},2,2,0,2,true,4524,2984,0,true,true,false,0.0045,0.0000,5
+nsl,"{Non(sk_A), Non(sk_B)}",least,true,{Non(sk_A)},{Non(sk_A)},3,2,1,2,false,4750,2984,0,true,true,false,0.0048,0.0001,5

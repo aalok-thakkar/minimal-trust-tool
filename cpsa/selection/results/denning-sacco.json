@@ -1,0 +1,594 @@
+{
+ "name": "denning-sacco",
+ "meta": {
+  "name": [
+   "denning-sacco"
+  ],
+  "source": [
+   "tst/denning-sacco.scm (defprotocol denning-sacco), protocol text unchanged"
+  ],
+  "goal": [
+   "written: responder agreement with the initiator on (a, b, k)"
+  ]
+ },
+ "U": {
+  "non_privk_a": "(non (privk a))",
+  "non_privk_b": "(non (privk b))",
+  "non_privk_ks": "(non (privk ks))",
+  "uniq_k": "(uniq k)",
+  "uniq_ta": "(uniq ta)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0189,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a"
+    ],
+    "time": 0.0193,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b"
+    ],
+    "time": 0.018,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_ks"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 8,
+    "skeletons": 11,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_k"
+    ],
+    "time": 0.0187,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_ta"
+    ],
+    "time": 0.0165,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b"
+    ],
+    "time": 0.0167,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_ks"
+    ],
+    "time": 0.0425,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 20,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_k"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_ta"
+    ],
+    "time": 0.0192,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "non_privk_ks"
+    ],
+    "time": 0.0294,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 6,
+    "skeletons": 21,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_k"
+    ],
+    "time": 0.019,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_ta"
+    ],
+    "time": 0.0196,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_ks",
+     "uniq_k"
+    ],
+    "time": 0.0165,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 8,
+    "skeletons": 11,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_ks",
+     "uniq_ta"
+    ],
+    "time": 0.0201,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 8,
+    "skeletons": 11,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0193,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "non_privk_ks"
+    ],
+    "time": 0.0423,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 13,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_k"
+    ],
+    "time": 0.0192,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_ta"
+    ],
+    "time": 0.0198,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_ks",
+     "uniq_k"
+    ],
+    "time": 0.0427,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 20,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_ks",
+     "uniq_ta"
+    ],
+    "time": 0.0554,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 20,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0197,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_k"
+    ],
+    "time": 0.0316,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 6,
+    "skeletons": 21,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_ta"
+    ],
+    "time": 0.0308,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 6,
+    "skeletons": 21,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0167,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_ks",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0189,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 8,
+    "skeletons": 11,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_k"
+    ],
+    "time": 0.0439,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 13,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_ta"
+    ],
+    "time": 0.0416,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 13,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_ks",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0533,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 20,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0312,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 8,
+    "failing_shapes": 6,
+    "skeletons": 21,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "non_privk_ks",
+     "uniq_k",
+     "uniq_ta"
+    ],
+    "time": 0.0409,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 8,
+    "failing_shapes": 0,
+    "skeletons": 13,
+    "warnings": []
+   }
+  ],
+  "n_points": 32,
+  "all_complete": true,
+  "total_time": 0.856,
+  "max_time": 0.055,
+  "monotone": true,
+  "n_sufficient": 16,
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "A": [
+   [
+    "non_privk_a"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 37,
+  "cpsa_goal_time": 0.057,
+  "cpsa_replay_time": 0.866,
+  "wall": 0.967,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 2,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 11,
+  "cpsa_goal_time": 0.082,
+  "cpsa_replay_time": 1.241,
+  "wall": 1.367,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 37,
+  "cpsa_goal_time": 0.053,
+  "cpsa_replay_time": 0.851,
+  "wall": 0.947,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_a"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 2,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 11,
+  "cpsa_goal_time": 0.087,
+  "cpsa_replay_time": 1.224,
+  "wall": 1.355,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

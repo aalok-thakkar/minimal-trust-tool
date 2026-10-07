@@ -1,0 +1,19 @@
+experiment: E3 (scale) and gadget validity, trust scale
+phases: timing
+date: 2026-10-04T10:29:08Z
+ocaml: 5.1.0; ocamlopt 5.1.0; flambda: false; dune 3.19.1
+build: dune build --profile release (scripts/run_scale.sh); no extra ocamlopt flags
+machine: Apple M3 Max; 14 cores (10 performance, 4 efficiency); memory 38654705664 bytes
+os: macOS 26.5.2
+sources: 23 files under lib/ and bin/, digest 35b516bfc4005047130af96db44d1737
+seeds: 0 1 2 3 4 5 6 7 8 9 (random families); instance RNG = Synth.random_state ~family ~n ~m ~seed;
+  padded witnesses: missed edge + 2 atoms of U \ (T + edge) drawn uniformly, RNG = Random.State.make [|7; n; m; seed|]
+  gadget: fixed instances of scale.py plus Synth.random with m = min(n, 4) raw edges, n = 4, 5, 6, plus one stress instance n = m = 6, seeds 0 1 2 3 4 5 6 7
+families: rand-m1/m2/m4 (m = n, 2n, 4n edges, sizes 1-3, minimalised), n = 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80;
+  pairs, dual (blocker of pairs), n = 4 6 8 10 12 14 16 18 20 22 24; thr (all n/2-subsets), thr-dual (all (n/2+1)-subsets), n = 4 6 8 10 12 14 16 18 20
+methods: alg1 (minimal witnesses), padded, padded_shrink, b1 (n <= 24), b2 (budget 2097152), b3
+counts phase: 10 parallel workers (forked children); timeout 600 s per run (SIGKILL by parent), heap cap 3000 MB (Gc alarm);
+  a series (family, method) stops at the first n with a timeout, memout or crash; that run is recorded
+timing phase: sequential, one child at a time; alg1 for seed 0 of every finished (family, n, m) and every seed of the
+  table groups; 5 repetitions if the counts-phase wall < 60 s, 3 if < 300 s, else 1; median and IQR (linear interpolation)
+peak memory: Gc top_heap_words of the child (major heap peak), MB

@@ -1,0 +1,41 @@
+# OCaml / dune
+_build/
+_opam/
+*.install
+.merlin
+*.cm[aiotx]
+*.cmxa
+*.cmti
+*.o
+*.a
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+!cpsa/selection/results/*.log
+!results/final/*.log
+!reference/python/cpsa/*.out
+!test/data/*.out
+
+# experiment outputs other than the published data
+results/*
+!results/final/
+results/quick/
+
+# editors and OS
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/

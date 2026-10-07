@@ -1,0 +1,31 @@
+trust cpsa: experiments E1, E2, E4
+command: ./_build/default/bin/main.exe cpsa --out results/final
+cwd: <repository root>
+start: 2026-10-06 22:46:06
+end: 2026-10-06 22:49:27
+load at start (uptime): 22:46  up 5 days,  8:42, 1 user, load averages: 3.65 3.86 3.92
+load at end (uptime): 22:49  up 5 days,  8:45, 1 user, load averages: 6.44 5.34 4.58
+note: runs are sequential; other jobs on the machine are not controlled, see load
+CPSA: CPSA 4.4.9 (~/.local/bin/cpsa4), no options (step limit 2000, strand bound 12)
+OCaml: 5.1.0
+dune: 3.19.1
+machine: Apple M3 Max, 14 cores, 38654705664 bytes memory
+OS: ProductName:		macOS ProductVersion:		26.5.2 BuildVersion:		25F84
+timeout per CPSA run: 600 s; E4: 1 warm-up, 5 repetitions (median, IQR)
+replay check: corrected (label 0 realized, no (preskeleton), no (dead))
+executable md5: 203174ecbe628a8e11a9528ece93a5ab
+templates (13):
+  blanchet-fixed  cpsa/protocols/blanchet-fixed.scm  md5 86b18a54ebc956669ec379ea7176ef80
+  blanchet  cpsa/protocols/blanchet.scm  md5 7e2cec95d3e6aa665a278cd139b7271d
+  denning-sacco  cpsa/protocols/denning-sacco.scm  md5 fbfb43d948c13a261a9450f0b52dba2c
+  isofix  cpsa/protocols/isofix.scm  md5 6ca06e28b634e606e5388aa23cd1c5d7
+  isoreject  cpsa/protocols/isoreject.scm  md5 3828a7b9071d474edadc2fc1b625e536
+  kerberos-key  cpsa/protocols/kerberos-key.scm  md5 c50ae7eb6d57f007007306e492aead39
+  kerberos-names  cpsa/protocols/kerberos-names.scm  md5 d53478e18ecf1d50fc7368046bc20cec
+  neuman-stubblebine  cpsa/protocols/neuman-stubblebine.scm  md5 f75711fa4a388a59d18c61f135bbecab
+  otway-rees-neq  cpsa/protocols/otway-rees-neq.scm  md5 2a74e2c031b2e2ac66de4a669c7850f6
+  otway-rees  cpsa/protocols/otway-rees.scm  md5 1ff1e295e79ab9d50359e2f51767dccf
+  pkinit-fix2  cpsa/protocols/pkinit-fix2.scm  md5 3658979d7090a2c834678298250b4b93
+  pkinit-flawed  cpsa/protocols/pkinit-flawed.scm  md5 046a5c000f3bc3ebc31894c6ada600cc
+  yahalom  cpsa/protocols/yahalom.scm  md5 52e55809e938d927846335523626ad37
+errors: none

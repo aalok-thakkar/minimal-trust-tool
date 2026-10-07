@@ -1,0 +1,435 @@
+=== blanchet-fixed  U = {non_privk_a non_privk_b uniq_d uniq_s}
+  lattice {}: fails
+  lattice {non_privk_a}: fails
+  lattice {non_privk_b}: fails
+  lattice {non_privk_a non_privk_b}: fails
+  lattice {uniq_d}: fails
+  lattice {non_privk_a uniq_d}: fails
+  lattice {non_privk_b uniq_d}: fails
+  lattice {non_privk_a non_privk_b uniq_d}: fails
+  lattice {uniq_s}: fails
+  lattice {non_privk_a uniq_s}: fails
+  lattice {non_privk_b uniq_s}: fails
+  lattice {non_privk_a non_privk_b uniq_s}: fails
+  lattice {uniq_d uniq_s}: fails
+  lattice {non_privk_a uniq_d uniq_s}: fails
+  lattice {non_privk_b uniq_d uniq_s}: fails
+  lattice {non_privk_a non_privk_b uniq_d uniq_s}: achieves
+  exhaustive: W = {non_privk_a non_privk_b uniq_d uniq_s}, A = {non_privk_a};{non_privk_b};{uniq_d};{uniq_s}, monotone = true, 16 goal runs, 0.315 s
+    O({}) fails: shape 0: stops = {non_privk_a, uniq_d}  [non_privk_a: unrealized; non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({non_privk_a}) fails: shape 1: stops = {uniq_d}  [non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({uniq_d}) fails: shape 1: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_s: realized]
+    O({non_privk_a, uniq_d}) fails: shape 2: stops = {uniq_s}  [non_privk_b: realized; uniq_s: unrealized]
+    O({non_privk_a, uniq_d, uniq_s}) fails: shape 2: stops = {non_privk_b}  [non_privk_b: unrealized]
+    O({non_privk_a, non_privk_b, uniq_d, uniq_s}) = achieves [0 shape(s)]
+  weakest[as-found]: W = {non_privk_a non_privk_b uniq_d uniq_s}, H = {non_privk_a};{non_privk_b};{uniq_d};{uniq_s}, distinct 6 (6g+13r), rejected 2
+    O({}) fails: shape 0: stops = {non_privk_a, uniq_d}  [non_privk_a: unrealized; non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({non_privk_a, non_privk_b, uniq_s}) fails: shape 1: stops = {uniq_d}  [uniq_d: preskeleton]
+    O({non_privk_a, non_privk_b, uniq_d, uniq_s}) = achieves [0 shape(s)]
+    O({uniq_d}) fails: shape 1: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_s: realized]
+    O({non_privk_a, uniq_d}) fails: shape 2: stops = {uniq_s}  [non_privk_b: realized; uniq_s: unrealized]
+    O({non_privk_a, uniq_d, uniq_s}) fails: shape 2: stops = {non_privk_b}  [non_privk_b: unrealized]
+  weakest[shrink]: W = {non_privk_a non_privk_b uniq_d uniq_s}, H = {non_privk_a};{non_privk_b};{uniq_d};{uniq_s}, distinct 6 (6g+11r), rejected 2
+=== blanchet  U = {non_privk_a non_privk_b uniq_d uniq_s}
+  lattice {}: fails
+  lattice {non_privk_a}: fails
+  lattice {non_privk_b}: fails
+  lattice {non_privk_a non_privk_b}: fails
+  lattice {uniq_d}: fails
+  lattice {non_privk_a uniq_d}: fails
+  lattice {non_privk_b uniq_d}: fails
+  lattice {non_privk_a non_privk_b uniq_d}: fails
+  lattice {uniq_s}: fails
+  lattice {non_privk_a uniq_s}: fails
+  lattice {non_privk_b uniq_s}: fails
+  lattice {non_privk_a non_privk_b uniq_s}: fails
+  lattice {uniq_d uniq_s}: fails
+  lattice {non_privk_a uniq_d uniq_s}: fails
+  lattice {non_privk_b uniq_d uniq_s}: fails
+  lattice {non_privk_a non_privk_b uniq_d uniq_s}: fails
+  exhaustive: W = [], A = {}, monotone = true, 16 goal runs, 0.276 s
+    O({}) fails: shape 0: stops = {non_privk_a, uniq_d}  [non_privk_a: unrealized; non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({non_privk_a}) fails: shape 1: stops = {uniq_d}  [non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({uniq_d}) fails: shape 1: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_s: realized]
+    O({non_privk_a, uniq_d}) fails: shape 2: stops = {}  [non_privk_b: realized; uniq_s: realized]
+  weakest[as-found]: W = [], H = {}, distinct 4 (4g+12r), rejected 2
+    O({}) fails: shape 0: stops = {non_privk_a, uniq_d}  [non_privk_a: unrealized; non_privk_b: realized; uniq_d: preskeleton; uniq_s: realized]
+    O({non_privk_a, non_privk_b, uniq_s}) fails: shape 1: stops = {uniq_d}  [uniq_d: preskeleton]
+    O({non_privk_a, non_privk_b, uniq_d, uniq_s}) fails: shape 2: stops = {}  []
+  weakest[shrink]: W = [], H = {}, distinct 3 (3g+5r), rejected 2
+=== denning-sacco  U = {non_privk_a non_privk_b non_privk_ks uniq_k uniq_ta}
+  lattice {}: fails
+  lattice {non_privk_a}: achieves
+  lattice {non_privk_b}: fails
+  lattice {non_privk_a non_privk_b}: achieves
+  lattice {non_privk_ks}: fails
+  lattice {non_privk_a non_privk_ks}: achieves
+  lattice {non_privk_b non_privk_ks}: fails
+  lattice {non_privk_a non_privk_b non_privk_ks}: achieves
+  lattice {uniq_k}: fails
+  lattice {non_privk_a uniq_k}: achieves
+  lattice {non_privk_b uniq_k}: fails
+  lattice {non_privk_a non_privk_b uniq_k}: achieves
+  lattice {non_privk_ks uniq_k}: fails
+  lattice {non_privk_a non_privk_ks uniq_k}: achieves
+  lattice {non_privk_b non_privk_ks uniq_k}: fails
+  lattice {non_privk_a non_privk_b non_privk_ks uniq_k}: achieves
+  lattice {uniq_ta}: fails
+  lattice {non_privk_a uniq_ta}: achieves
+  lattice {non_privk_b uniq_ta}: fails
+  lattice {non_privk_a non_privk_b uniq_ta}: achieves
+  lattice {non_privk_ks uniq_ta}: fails
+  lattice {non_privk_a non_privk_ks uniq_ta}: achieves
+  lattice {non_privk_b non_privk_ks uniq_ta}: fails
+  lattice {non_privk_a non_privk_b non_privk_ks uniq_ta}: achieves
+  lattice {uniq_k uniq_ta}: fails
+  lattice {non_privk_a uniq_k uniq_ta}: achieves
+  lattice {non_privk_b uniq_k uniq_ta}: fails
+  lattice {non_privk_a non_privk_b uniq_k uniq_ta}: achieves
+  lattice {non_privk_ks uniq_k uniq_ta}: fails
+  lattice {non_privk_a non_privk_ks uniq_k uniq_ta}: achieves
+  lattice {non_privk_b non_privk_ks uniq_k uniq_ta}: fails
+  lattice {non_privk_a non_privk_b non_privk_ks uniq_k uniq_ta}: achieves
+  exhaustive: W = {non_privk_a}, A = {non_privk_a}, monotone = true, 32 goal runs, 0.789 s
+    O({}) fails: shape 0: stops = {non_privk_a, non_privk_ks}  [non_privk_a: unrealized; non_privk_b: realized; non_privk_ks: unrealized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_a}) = achieves [1 shape(s)]
+    O({non_privk_ks}) fails: shape 3: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 4: stops = {non_privk_a, non_privk_b}  [non_privk_a: unrealized; non_privk_b: unrealized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 5: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 6: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 7: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 8: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 9: stops = {non_privk_a, non_privk_b}  [non_privk_a: unrealized; non_privk_b: unrealized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_ks}) fails: shape 10: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_k: realized; uniq_ta: realized]
+  weakest[as-found]: W = {non_privk_a}, H = {non_privk_a}, distinct 3 (3g+37r), rejected 0
+    O({}) fails: shape 0: stops = {non_privk_a, non_privk_ks}  [non_privk_a: unrealized; non_privk_b: realized; non_privk_ks: unrealized; uniq_k: realized; uniq_ta: realized]
+    O({non_privk_a, non_privk_b, uniq_k, uniq_ta}) = achieves [1 shape(s)]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 3: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 5: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 6: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 7: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 8: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_b, non_privk_ks, uniq_k, uniq_ta}) fails: shape 10: stops = {non_privk_a}  [non_privk_a: unrealized]
+    O({non_privk_a}) = achieves [1 shape(s)]
+  weakest[shrink]: W = {non_privk_a}, H = {non_privk_a}, distinct 4 (4g+11r), rejected 0
+=== isofix  U = {non_privk_a non_privk_b uniq_na uniq_nc}
+  lattice {}: fails
+  lattice {non_privk_a}: achieves
+  lattice {non_privk_b}: fails
+  lattice {non_privk_a non_privk_b}: achieves
+  lattice {uniq_na}: fails
+  lattice {non_privk_a uniq_na}: achieves
+  lattice {non_privk_b uniq_na}: fails
+  lattice {non_privk_a non_privk_b uniq_na}: achieves
+  lattice {uniq_nc}: fails
+  lattice {non_privk_a uniq_nc}: achieves
+  lattice {non_privk_b uniq_nc}: fails
+  lattice {non_privk_a non_privk_b uniq_nc}: achieves
+  lattice {uniq_na uniq_nc}: fails
+  lattice {non_privk_a uniq_na uniq_nc}: achieves
+  lattice {non_privk_b uniq_na uniq_nc}: fails
+  lattice {non_privk_a non_privk_b uniq_na uniq_nc}: achieves
+  exhaustive: W = {non_privk_a}, A = {non_privk_a}, monotone = true, 16 goal runs, 0.269 s
+    O({}) fails: shape 0: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_na: realized; uniq_nc: realized]
+    O({non_privk_a}) = achieves [1 shape(s)]
+  weakest[as-found]: W = {non_privk_a}, H = {non_privk_a}, distinct 2 (2g+4r), rejected 0
+    O({}) fails: shape 0: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_na: realized; uniq_nc: realized]
+    O({non_privk_a, non_privk_b, uniq_na, uniq_nc}) = achieves [1 shape(s)]
+    O({non_privk_a}) = achieves [1 shape(s)]
+  weakest[shrink]: W = {non_privk_a}, H = {non_privk_a}, distinct 3 (3g+4r), rejected 0
+=== isoreject  U = {non_privk_a non_privk_b uniq_na uniq_nc}
+  lattice {}: fails
+  lattice {non_privk_a}: fails
+  lattice {non_privk_b}: fails
+  lattice {non_privk_a non_privk_b}: fails
+  lattice {uniq_na}: fails
+  lattice {non_privk_a uniq_na}: fails
+  lattice {non_privk_b uniq_na}: fails
+  lattice {non_privk_a non_privk_b uniq_na}: fails
+  lattice {uniq_nc}: fails
+  lattice {non_privk_a uniq_nc}: fails
+  lattice {non_privk_b uniq_nc}: fails
+  lattice {non_privk_a non_privk_b uniq_nc}: fails
+  lattice {uniq_na uniq_nc}: fails
+  lattice {non_privk_a uniq_na uniq_nc}: fails
+  lattice {non_privk_b uniq_na uniq_nc}: fails
+  lattice {non_privk_a non_privk_b uniq_na uniq_nc}: fails
+  exhaustive: W = [], A = {}, monotone = true, 16 goal runs, 0.275 s
+    O({}) fails: shape 0: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_na: realized; uniq_nc: realized]
+    O({non_privk_a}) fails: shape 2: stops = {}  [non_privk_b: realized; uniq_na: realized; uniq_nc: realized]
+  weakest[as-found]: W = [], H = {}, distinct 2 (2g+7r), rejected 0
+    O({}) fails: shape 0: stops = {non_privk_a}  [non_privk_a: unrealized; non_privk_b: realized; uniq_na: realized; uniq_nc: realized]
+    O({non_privk_a, non_privk_b, uniq_na, uniq_nc}) fails: shape 2: stops = {}  []
+  weakest[shrink]: W = [], H = {}, distinct 2 (2g+4r), rejected 0
+=== kerberos-key  U = {non_ltk_aks non_ltk_bks uniq_t uniq_tp}
+  lattice {}: fails
+  lattice {non_ltk_aks}: fails
+  lattice {non_ltk_bks}: fails
+  lattice {non_ltk_aks non_ltk_bks}: achieves
+  lattice {uniq_t}: fails
+  lattice {non_ltk_aks uniq_t}: fails
+  lattice {non_ltk_bks uniq_t}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_t}: achieves
+  lattice {uniq_tp}: fails
+  lattice {non_ltk_aks uniq_tp}: fails
+  lattice {non_ltk_bks uniq_tp}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_tp}: achieves
+  lattice {uniq_t uniq_tp}: fails
+  lattice {non_ltk_aks uniq_t uniq_tp}: fails
+  lattice {non_ltk_bks uniq_t uniq_tp}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_t uniq_tp}: achieves
+  exhaustive: W = {non_ltk_aks non_ltk_bks}, A = {non_ltk_aks};{non_ltk_bks}, monotone = true, 16 goal runs, 1.098 s
+    O({}) fails: shape 0: stops = {non_ltk_aks, non_ltk_bks}  [non_ltk_aks: unrealized; non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks}) fails: shape 1: stops = {non_ltk_bks}  [non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks}) fails: shape 2: stops = {non_ltk_bks}  [non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_bks}) fails: shape 1: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_bks}) fails: shape 2: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, non_ltk_bks}) = achieves [6 shape(s)]
+  weakest[as-found]: W = {non_ltk_aks non_ltk_bks}, H = {non_ltk_aks};{non_ltk_bks}, distinct 4 (4g+16r), rejected 0
+    O({}) fails: shape 0: stops = {non_ltk_aks, non_ltk_bks}  [non_ltk_aks: unrealized; non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, uniq_t, uniq_tp}) fails: shape 1: stops = {non_ltk_bks}  [non_ltk_bks: unrealized]
+    O({non_ltk_aks, uniq_t, uniq_tp}) fails: shape 2: stops = {non_ltk_bks}  [non_ltk_bks: unrealized]
+    O({non_ltk_aks, non_ltk_bks, uniq_t, uniq_tp}) = achieves [6 shape(s)]
+    O({non_ltk_bks}) fails: shape 1: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_bks}) fails: shape 2: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, non_ltk_bks}) = achieves [6 shape(s)]
+  weakest[shrink]: W = {non_ltk_aks non_ltk_bks}, H = {non_ltk_aks};{non_ltk_bks}, distinct 5 (5g+12r), rejected 0
+=== kerberos-names  U = {non_ltk_aks non_ltk_bks uniq_t uniq_tp}
+  lattice {}: fails
+  lattice {non_ltk_aks}: fails
+  lattice {non_ltk_bks}: fails
+  lattice {non_ltk_aks non_ltk_bks}: fails
+  lattice {uniq_t}: fails
+  lattice {non_ltk_aks uniq_t}: fails
+  lattice {non_ltk_bks uniq_t}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_t}: fails
+  lattice {uniq_tp}: fails
+  lattice {non_ltk_aks uniq_tp}: fails
+  lattice {non_ltk_bks uniq_tp}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_tp}: fails
+  lattice {uniq_t uniq_tp}: fails
+  lattice {non_ltk_aks uniq_t uniq_tp}: fails
+  lattice {non_ltk_bks uniq_t uniq_tp}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_t uniq_tp}: fails
+  exhaustive: W = [], A = {}, monotone = true, 16 goal runs, 1.108 s
+    O({}) fails: shape 0: stops = {non_ltk_aks, non_ltk_bks}  [non_ltk_aks: unrealized; non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks}) fails: shape 1: stops = {non_ltk_bks}  [non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks}) fails: shape 2: stops = {non_ltk_bks}  [non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_bks}) fails: shape 1: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_bks}) fails: shape 2: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, non_ltk_bks}) fails: shape 20: stops = {}  [uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, non_ltk_bks}) fails: shape 22: stops = {}  [uniq_t: realized; uniq_tp: realized]
+  weakest[as-found]: W = [], H = {}, distinct 4 (4g+20r), rejected 0
+    O({}) fails: shape 0: stops = {non_ltk_aks, non_ltk_bks}  [non_ltk_aks: unrealized; non_ltk_bks: unrealized; uniq_t: realized; uniq_tp: realized]
+    O({non_ltk_aks, uniq_t, uniq_tp}) fails: shape 1: stops = {non_ltk_bks}  [non_ltk_bks: unrealized]
+    O({non_ltk_aks, uniq_t, uniq_tp}) fails: shape 2: stops = {non_ltk_bks}  [non_ltk_bks: unrealized]
+    O({non_ltk_aks, non_ltk_bks, uniq_t, uniq_tp}) fails: shape 29: stops = {}  []
+    O({non_ltk_aks, non_ltk_bks, uniq_t, uniq_tp}) fails: shape 38: stops = {}  []
+  weakest[shrink]: W = [], H = {}, distinct 3 (3g+6r), rejected 0
+=== neuman-stubblebine  U = {non_ltk_aks non_ltk_bks uniq_ra uniq_rb uniq_tb}
+  lattice {}: fails
+  lattice {non_ltk_aks}: fails
+  lattice {non_ltk_bks}: fails
+  lattice {non_ltk_aks non_ltk_bks}: achieves
+  lattice {uniq_ra}: fails
+  lattice {non_ltk_aks uniq_ra}: fails
+  lattice {non_ltk_bks uniq_ra}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_ra}: achieves
+  lattice {uniq_rb}: fails
+  lattice {non_ltk_aks uniq_rb}: fails
+  lattice {non_ltk_bks uniq_rb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_rb}: achieves
+  lattice {uniq_ra uniq_rb}: fails
+  lattice {non_ltk_aks uniq_ra uniq_rb}: fails
+  lattice {non_ltk_bks uniq_ra uniq_rb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_ra uniq_rb}: achieves
+  lattice {uniq_tb}: fails
+  lattice {non_ltk_aks uniq_tb}: fails
+  lattice {non_ltk_bks uniq_tb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_tb}: achieves
+  lattice {uniq_ra uniq_tb}: fails
+  lattice {non_ltk_aks uniq_ra uniq_tb}: fails
+  lattice {non_ltk_bks uniq_ra uniq_tb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_ra uniq_tb}: achieves
+  lattice {uniq_rb uniq_tb}: fails
+  lattice {non_ltk_aks uniq_rb uniq_tb}: fails
+  lattice {non_ltk_bks uniq_rb uniq_tb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_rb uniq_tb}: achieves
+  lattice {uniq_ra uniq_rb uniq_tb}: fails
+  lattice {non_ltk_aks uniq_ra uniq_rb uniq_tb}: fails
+  lattice {non_ltk_bks uniq_ra uniq_rb uniq_tb}: fails
+  lattice {non_ltk_aks non_ltk_bks uniq_ra uniq_rb uniq_tb}: achieves
+  exhaustive: W = {non_ltk_aks non_ltk_bks}, A = {non_ltk_aks};{non_ltk_bks}, monotone = true, 32 goal runs, 0.735 s
+    O({}) fails: shape 0: stops = {non_ltk_bks}  [non_ltk_aks: realized; non_ltk_bks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: realized]
+    O({non_ltk_bks}) fails: shape 2: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: realized]
+    O({non_ltk_bks}) fails: shape 3: stops = {non_ltk_aks, uniq_tb}  [non_ltk_aks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: preskeleton]
+    O({non_ltk_aks, non_ltk_bks}) = achieves [2 shape(s)]
+  weakest[as-found]: W = {non_ltk_aks non_ltk_bks}, H = {non_ltk_aks};{non_ltk_bks}, distinct 3 (3g+13r), rejected 1
+    O({}) fails: shape 0: stops = {non_ltk_bks}  [non_ltk_aks: realized; non_ltk_bks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: realized]
+    O({non_ltk_aks, non_ltk_bks, uniq_ra, uniq_rb, uniq_tb}) = achieves [1 shape(s)]
+    O({non_ltk_bks}) fails: shape 2: stops = {non_ltk_aks}  [non_ltk_aks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: realized]
+    O({non_ltk_bks}) fails: shape 3: stops = {non_ltk_aks, uniq_tb}  [non_ltk_aks: unrealized; uniq_ra: realized; uniq_rb: realized; uniq_tb: preskeleton]
+    O({non_ltk_aks, non_ltk_bks}) = achieves [2 shape(s)]
+  weakest[shrink]: W = {non_ltk_aks non_ltk_bks}, H = {non_ltk_aks};{non_ltk_bks}, distinct 4 (4g+13r), rejected 1
+=== otway-rees-neq  U = {non_ltk_as non_ltk_bs uniq_m uniq_nb}
+  lattice {}: fails
+  lattice {non_ltk_as}: fails
+  lattice {non_ltk_bs}: fails
+  lattice {non_ltk_as non_ltk_bs}: fails
+  lattice {uniq_m}: fails
+  lattice {non_ltk_as uniq_m}: fails
+  lattice {non_ltk_bs uniq_m}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_m}: fails
+  lattice {uniq_nb}: fails
+  lattice {non_ltk_as uniq_nb}: fails
+  lattice {non_ltk_bs uniq_nb}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_nb}: achieves
+  lattice {uniq_m uniq_nb}: fails
+  lattice {non_ltk_as uniq_m uniq_nb}: fails
+  lattice {non_ltk_bs uniq_m uniq_nb}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_m uniq_nb}: achieves
+  exhaustive: W = {non_ltk_as non_ltk_bs uniq_nb}, A = {non_ltk_as};{non_ltk_bs};{uniq_nb}, monotone = true, 16 goal runs, 0.637 s
+    O({}) fails: shape 0: stops = {non_ltk_bs}  [non_ltk_as: realized; non_ltk_bs: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 4: stops = {non_ltk_as}  [non_ltk_as: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 5: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 6: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 8: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 9: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 10: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 11: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 12: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 13: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 5: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 6: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 8: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 9: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 10: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 12: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 13: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 14: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs, uniq_nb}) = achieves [1 shape(s)]
+  weakest[as-found]: W = {non_ltk_as non_ltk_bs uniq_nb}, H = {non_ltk_as};{non_ltk_bs};{uniq_nb}, distinct 4 (4g+47r), rejected 16
+    O({}) fails: shape 0: stops = {non_ltk_bs}  [non_ltk_as: realized; non_ltk_bs: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_as, non_ltk_bs, uniq_m, uniq_nb}) = achieves [1 shape(s)]
+    O({non_ltk_bs}) fails: shape 4: stops = {non_ltk_as}  [non_ltk_as: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 5: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 6: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 8: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 9: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 10: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 11: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 12: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 13: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 5: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 6: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 8: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 9: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 10: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 12: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 13: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs}) fails: shape 14: stops = {uniq_nb}  [uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_as, non_ltk_bs, uniq_nb}) = achieves [1 shape(s)]
+  weakest[shrink]: W = {non_ltk_as non_ltk_bs uniq_nb}, H = {non_ltk_as};{non_ltk_bs};{uniq_nb}, distinct 5 (5g+47r), rejected 16
+=== otway-rees  U = {non_ltk_as non_ltk_bs uniq_m uniq_nb}
+  lattice {}: fails
+  lattice {non_ltk_as}: fails
+  lattice {non_ltk_bs}: fails
+  lattice {non_ltk_as non_ltk_bs}: fails
+  lattice {uniq_m}: fails
+  lattice {non_ltk_as uniq_m}: fails
+  lattice {non_ltk_bs uniq_m}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_m}: fails
+  lattice {uniq_nb}: fails
+  lattice {non_ltk_as uniq_nb}: fails
+  lattice {non_ltk_bs uniq_nb}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_nb}: fails
+  lattice {uniq_m uniq_nb}: fails
+  lattice {non_ltk_as uniq_m uniq_nb}: fails
+  lattice {non_ltk_bs uniq_m uniq_nb}: fails
+  lattice {non_ltk_as non_ltk_bs uniq_m uniq_nb}: fails
+  exhaustive: W = [], A = {}, monotone = true, 16 goal runs, 0.830 s
+    O({}) fails: shape 0: stops = {non_ltk_bs}  [non_ltk_as: realized; non_ltk_bs: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 4: stops = {non_ltk_as}  [non_ltk_as: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 5: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 6: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 9: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 10: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 11: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: dead]
+    O({non_ltk_bs}) fails: shape 13: stops = {}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 14: stops = {}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_bs}) fails: shape 15: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 16: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+    O({non_ltk_bs}) fails: shape 17: stops = {uniq_nb}  [non_ltk_as: realized; uniq_m: realized; uniq_nb: preskeleton]
+  weakest[as-found]: W = [], H = {}, distinct 2 (2g+37r), rejected 8
+    O({}) fails: shape 0: stops = {non_ltk_bs}  [non_ltk_as: realized; non_ltk_bs: unrealized; uniq_m: realized; uniq_nb: realized]
+    O({non_ltk_as, non_ltk_bs, uniq_m, uniq_nb}) fails: shape 6: stops = {}  []
+    O({non_ltk_as, non_ltk_bs, uniq_m, uniq_nb}) fails: shape 7: stops = {}  []
+    O({non_ltk_as, non_ltk_bs, uniq_m, uniq_nb}) fails: shape 9: stops = {}  []
+  weakest[shrink]: W = [], H = {}, distinct 2 (2g+4r), rejected 0
+=== pkinit-fix2  U = {non_as non_c}
+  lattice {}: fails
+  lattice {non_as}: achieves
+  lattice {non_c}: fails
+  lattice {non_as non_c}: achieves
+  exhaustive: W = {non_as}, A = {non_as}, monotone = true, 4 goal runs, 0.065 s
+    O({}) fails: shape 0: stops = {non_as}  [non_as: unrealized; non_c: realized]
+    O({non_as}) = achieves [1 shape(s)]
+  weakest[as-found]: W = {non_as}, H = {non_as}, distinct 2 (2g+2r), rejected 0
+    O({}) fails: shape 0: stops = {non_as}  [non_as: unrealized; non_c: realized]
+    O({non_as, non_c}) = achieves [1 shape(s)]
+    O({non_as}) = achieves [1 shape(s)]
+  weakest[shrink]: W = {non_as}, H = {non_as}, distinct 3 (3g+2r), rejected 0
+=== pkinit-flawed  U = {non_as non_c}
+  lattice {}: fails
+  lattice {non_as}: fails
+  lattice {non_c}: fails
+  lattice {non_as non_c}: fails
+  exhaustive: W = [], A = {}, monotone = true, 4 goal runs, 0.068 s
+    O({}) fails: shape 0: stops = {non_as}  [non_as: unrealized; non_c: realized]
+    O({non_as}) fails: shape 1: stops = {}  [non_c: realized]
+  weakest[as-found]: W = [], H = {}, distinct 2 (2g+3r), rejected 0
+    O({}) fails: shape 0: stops = {non_as}  [non_as: unrealized; non_c: realized]
+    O({non_as, non_c}) fails: shape 1: stops = {}  []
+  weakest[shrink]: W = [], H = {}, distinct 2 (2g+2r), rejected 0
+=== yahalom  U = {non_ltk_ac non_ltk_bc uniq_na uniq_nb}
+  lattice {}: fails
+  lattice {non_ltk_ac}: fails
+  lattice {non_ltk_bc}: fails
+  lattice {non_ltk_ac non_ltk_bc}: achieves
+  lattice {uniq_na}: fails
+  lattice {non_ltk_ac uniq_na}: fails
+  lattice {non_ltk_bc uniq_na}: fails
+  lattice {non_ltk_ac non_ltk_bc uniq_na}: achieves
+  lattice {uniq_nb}: fails
+  lattice {non_ltk_ac uniq_nb}: fails
+  lattice {non_ltk_bc uniq_nb}: fails
+  lattice {non_ltk_ac non_ltk_bc uniq_nb}: achieves
+  lattice {uniq_na uniq_nb}: fails
+  lattice {non_ltk_ac uniq_na uniq_nb}: fails
+  lattice {non_ltk_bc uniq_na uniq_nb}: fails
+  lattice {non_ltk_ac non_ltk_bc uniq_na uniq_nb}: achieves
+  exhaustive: W = {non_ltk_ac non_ltk_bc}, A = {non_ltk_ac};{non_ltk_bc}, monotone = true, 16 goal runs, 0.655 s
+    O({}) fails: shape 0: stops = {non_ltk_bc}  [non_ltk_ac: realized; non_ltk_bc: unrealized; uniq_na: realized; uniq_nb: realized]
+    O({non_ltk_bc}) fails: shape 2: stops = {non_ltk_ac}  [non_ltk_ac: unrealized; uniq_na: realized; uniq_nb: realized]
+    O({non_ltk_bc}) fails: shape 3: stops = {non_ltk_ac, uniq_nb}  [non_ltk_ac: unrealized; uniq_na: realized; uniq_nb: unrealized]
+    O({non_ltk_ac, non_ltk_bc}) = achieves [2 shape(s)]
+  weakest[as-found]: W = {non_ltk_ac non_ltk_bc}, H = {non_ltk_ac};{non_ltk_bc}, distinct 3 (3g+10r), rejected 0
+    O({}) fails: shape 0: stops = {non_ltk_bc}  [non_ltk_ac: realized; non_ltk_bc: unrealized; uniq_na: realized; uniq_nb: realized]
+    O({non_ltk_ac, non_ltk_bc, uniq_na, uniq_nb}) = achieves [1 shape(s)]
+    O({non_ltk_bc}) fails: shape 2: stops = {non_ltk_ac}  [non_ltk_ac: unrealized; uniq_na: realized; uniq_nb: realized]
+    O({non_ltk_bc}) fails: shape 3: stops = {non_ltk_ac, uniq_nb}  [non_ltk_ac: unrealized; uniq_na: realized; uniq_nb: unrealized]
+    O({non_ltk_ac, non_ltk_bc}) = achieves [2 shape(s)]
+  weakest[shrink]: W = {non_ltk_ac non_ltk_bc}, H = {non_ltk_ac};{non_ltk_bc}, distinct 4 (4g+10r), rejected 0
+=== E4 blanchet-fixed (1 warm-up + 5 reps)
+=== E4 blanchet (1 warm-up + 5 reps)
+=== E4 denning-sacco (1 warm-up + 5 reps)
+=== E4 isofix (1 warm-up + 5 reps)
+=== E4 isoreject (1 warm-up + 5 reps)
+=== E4 kerberos-key (1 warm-up + 5 reps)
+=== E4 kerberos-names (1 warm-up + 5 reps)
+=== E4 neuman-stubblebine (1 warm-up + 5 reps)
+=== E4 otway-rees-neq (1 warm-up + 5 reps)
+=== E4 otway-rees (1 warm-up + 5 reps)
+=== E4 pkinit-fix2 (1 warm-up + 5 reps)
+=== E4 pkinit-flawed (1 warm-up + 5 reps)
+=== E4 yahalom (1 warm-up + 5 reps)

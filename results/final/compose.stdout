@@ -1,0 +1,37 @@
+== tagged, U = {Non(sk_A), Non(sk_C), Unq(N)}
+   P1 alone, chi1           W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   P2 alone, chi2           W = {Non(sk_A)}                                    H = {Non(sk_A)}                              calls 2 (queries 2)
+   join                         {Non(sk_A), Unq(N)}
+   P1||P2, chi1             W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   P1||P2, chi2             W = {Non(sk_A)}                                    H = {Non(sk_A)}                              calls 2 (queries 2)
+   P1||P2, chi1 & chi2      W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   Corollary (W(chi1) v W(chi2) = W(chi1 & chi2) in composition): true
+   Theorem condition: holds; W(composition) = join: true
+   cross-protocol stopping sets: chi1 none; chi2 none
+   brute force agrees on all five: true
+
+== untagged, U = {Non(sk_A), Non(sk_C), Unq(N)}
+   P1 alone, chi1           W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   P2 alone, chi2           W = {Non(sk_A)}                                    H = {Non(sk_A)}                              calls 2 (queries 2)
+   join                         {Non(sk_A), Unq(N)}
+   P1||P2, chi1             W = {Non(sk_A), Non(sk_C), Unq(N)}                 H = {Non(sk_A)}; {Non(sk_C)}; {Unq(N)}       calls 4 (queries 4)
+   P1||P2, chi2             W = false                                          H = {{}}                                     calls 1 (queries 1)
+   P1||P2, chi1 & chi2      W = false                                          H = {{}}                                     calls 1 (queries 1)
+   Corollary (W(chi1) v W(chi2) = W(chi1 & chi2) in composition): true
+   Theorem condition: fails, offending {{}}; W(composition) = join: false
+   cross-protocol stopping sets: chi1 {Non(sk_C)}; chi2 {{}}
+   brute force agrees on all five: true
+
+== separate_keys, U = {Non(sk_A), Non(sk_A2), Non(sk_C), Unq(N)}
+   P1 alone, chi1           W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   P2 alone, chi2           W = {Non(sk_A2)}                                   H = {Non(sk_A2)}                             calls 2 (queries 2)
+   join                         {Non(sk_A), Non(sk_A2), Unq(N)}
+   P1||P2, chi1             W = {Non(sk_A), Unq(N)}                            H = {Non(sk_A)}; {Unq(N)}                    calls 3 (queries 3)
+   P1||P2, chi2             W = {Non(sk_A2)}                                   H = {Non(sk_A2)}                             calls 2 (queries 2)
+   P1||P2, chi1 & chi2      W = {Non(sk_A), Non(sk_A2), Unq(N)}                H = {Non(sk_A)}; {Non(sk_A2)}; {Unq(N)}      calls 4 (queries 4)
+   Corollary (W(chi1) v W(chi2) = W(chi1 & chi2) in composition): true
+   Theorem condition: holds; W(composition) = join: true
+   cross-protocol stopping sets: chi1 none; chi2 none
+   brute force agrees on all five: true
+
+wrote results/final/compose.csv (3 rows)

@@ -1,0 +1,4 @@
+(executable
+ (name exp)
+ (public_name trust-exp)
+ (libraries trust unix))

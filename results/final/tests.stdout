@@ -1,0 +1,64 @@
+  loop vs brute force: 200 cases, 0 failures
+
+62 passed, 0 failed
+sexp: atoms, strings with ; and parens, comments                 ok
+sexp: printing round trip                                        ok
+sexp: unbalanced input raises                                    ok
+saved output: complete                                           ok
+saved output: 1 skeleton, 1 shape, 1 failing                     ok
+saved output: verdict fails                                      ok
+saved output: binding is the (no ...) form                       ok
+template: name, U in file order                                  ok
+template: goal source carries the facts in id order              ok
+replay: defskeleton keeps strands and uniq-orig, adds non-orig   ok
+incomplete: no "Nothing left to do"                              ok
+incomplete: aborted skeleton                                     ok
+incomplete: step limit message                                   ok
+incomplete: stderr                                               ok
+incomplete: timeout                                              ok
+replay: realized label 0 survives                                ok
+replay: (realized) (preskeleton) does not survive                ok
+replay: (realized) (dead) does not survive                       ok
+replay: unrealized label 0 does not survive                      ok
+replay: stderr means rejected                                    ok
+integration tests with ~/.local/bin/cpsa4 (CPSA 4.4.9)
+pkinit-flawed: exhaustive W                                      ok
+pkinit-flawed as-found: W, H, 2g+3r                              ok
+pkinit-flawed shrink: W, H, 2g+2r                                ok
+pkinit-fix2: exhaustive W                                        ok
+pkinit-fix2 as-found: W, H, 2g+2r                                ok
+pkinit-fix2 shrink: W, H, 3g+2r                                  ok
+pkinit-flawed shape 0: survives non(privk c)                     ok
+pkinit-flawed shape 0: killed by non(privk as)                   ok
+test_cpsa: all checks passed
+== Clutter (hitting.py _test)
+== Loop (cegis.py _test; Section 2 answers via mock oracles)
+  padded: plain distinct=6 queries=8 shrink_calls=0 iterations=5 oracle_time=0.000000s blocker_time=0.000002s; shrink distinct=7 queries=4 shrink_calls=5 iterations=3 oracle_time=0.000000s blocker_time=0.000003s
+== Clutter properties
+  blocker(blocker(H)) = minimalize(H): 2000 cases, 0 failures
+  blocker(H) = brute-force minimal transversals: 1000 cases, 0 failures
+  minimalize is a clutter, keeps a subset of every member: 2000 cases, 0 failures
+  minimalize = naive definition: 2000 cases, 0 failures
+  involution, n <= 16, up to 48 edges of size <= 6: 200 cases, 0 failures
+== Loop properties (random monotone oracles, n <= 10)
+  weakest = brute force, H = attacks, call bound: minimal: 1000 cases, 0 failures
+  weakest = brute force, H = attacks, call bound: padded: 1000 cases, 0 failures
+  weakest = brute force, H = attacks, call bound: padded+shrink: 1000 cases, 0 failures
+  levelwise = brute force; greedy in W: 500 cases, 0 failures
+== Dy (dy.py _test and further cases)
+
+10764 passed, 0 failed
+== Bounded.derivable = Dy.derivable on random terms
+== analyser rows at pool size 1
+  signed CR (pruned): W = [{Non(sk_A), Unq(N)}], H = [{Non(sk_A)}, {Unq(N)}], 3 calls
+  two-key (pruned): W = [{Non(k1), Unq(N)}, {Non(k2), Unq(N)}], H = [{Unq(N)}, {Non(k1), Non(k2)}], 4 calls
+  NSPK + channels: W = [{auth(A->B)}, {conf(B->A)}], H = [{auth(A->B), conf(B->A)}], 3 calls
+== composition
+== witness runs: replay, attack, stops by replay = tracked, single clause
+== verdicts monotone, mode-independent; Loop = brute force in every mode
+== reduction (block coalescing, symmetry): same verdicts and least stops
+  NSL 2 inst. {}: 13 states full, 9 reduced
+  NSL 2 inst. {Non(sk_B)}: 11 states full, 8 reduced
+  NSL 2 inst. {Non(sk_A), Non(sk_B)}: 140552 states full, 14514 reduced
+== pool parameter: instances 2 builds and agrees on NSPK = false
+bounded tests: 2507 passed, 0 failed

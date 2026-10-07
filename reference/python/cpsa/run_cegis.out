@@ -1,0 +1,28 @@
+CPSA binary: ~/.local/bin/cpsa4
+
+=== pkinit-flawed ===   U = ['non_as', 'non_c']
+  O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+  O(['non_as']) = fails: shape label 1, stops(x) = {}  checks: {'non_c': 'realized'}
+  conflicts H (= attacks(chi)) = [[]]
+  MinTrust = EMPTY = false (no trust suffices)
+  oracle invocations by the loop: 2, distinct trusts queried: 2 -> [[], ['non_as']]
+  CPSA runs: 2 goal runs (0.04s) + 3 stops checks (0.06s); wall 0.10s
+
+=== pkinit-fix2 ===   U = ['non_as', 'non_c']
+  O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+  O(['non_as']) = achieves   [1 shape(s), 0.02s]
+  conflicts H (= attacks(chi)) = [['non_as']]
+  MinTrust = [['non_as']]
+  oracle invocations by the loop: 2, distinct trusts queried: 2 -> [[], ['non_as']]
+  CPSA runs: 2 goal runs (0.04s) + 2 stops checks (0.04s); wall 0.08s
+
+=== yahalom ===   U = ['non_ltk_ac', 'non_ltk_bc', 'uniq_na', 'uniq_nb']
+  O({}) = fails: shape label 0, stops(x) = ['non_ltk_bc']  checks: {'non_ltk_ac': 'realized', 'non_ltk_bc': 'unrealized', 'uniq_na': 'realized', 'uniq_nb': 'realized'}
+  O(['non_ltk_bc']) = fails: shape label 2, stops(x) = ['non_ltk_ac']  checks: {'non_ltk_ac': 'unrealized', 'uniq_na': 'realized', 'uniq_nb': 'realized'}
+  O(['non_ltk_bc']) = fails: shape label 3, stops(x) = ['non_ltk_ac', 'uniq_nb']  checks: {'non_ltk_ac': 'unrealized', 'uniq_na': 'realized', 'uniq_nb': 'unrealized'}
+  O(['non_ltk_ac', 'non_ltk_bc']) = achieves   [2 shape(s), 0.05s]
+  conflicts H (= attacks(chi)) = [['non_ltk_bc'], ['non_ltk_ac']]
+  MinTrust = [['non_ltk_ac', 'non_ltk_bc']]
+  oracle invocations by the loop: 3, distinct trusts queried: 3 -> [[], ['non_ltk_bc'], ['non_ltk_ac', 'non_ltk_bc']]
+  CPSA runs: 3 goal runs (0.08s) + 10 stops checks (0.26s); wall 0.35s
+python3 cpsa/run_cegis.py yahalom  0.23s user 0.08s system 55% cpu 0.567 total

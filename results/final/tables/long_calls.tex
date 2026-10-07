@@ -1,0 +1,33 @@
+\begin{table}[tbp]
+\caption{Distinct oracle calls of Algorithm~\ref{alg:loop} per witness mode, against $N = |\attacks(\chi)| + |\weakest(\chi)|$, the bound of Theorem~\ref{thm:cost} for witnesses with minimal stopping sets. As found: the first attack the oracle reports (for CPSA, the failing shape with the smallest clause); pruned: the analyser's run pruned to a minimal run; least: a run whose stopping set is least among all attacks the analyser reaches; shrink: as-found witnesses minimalised by further calls (counted). CPSA runs are goal runs $+$ replay runs that compute $\stops(x)$. B1 evaluates all $2^{|U|}$ trusts; B2 enumerates trusts by size, skipping supersets of sufficient ones; B3 is the conjunct-dropping method of~\cite{rowe}, which returns one minimal sufficient trust. B2 and B3 were run on the CPSA rows only.}
+\label{tab:calls}
+\centering
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabular}{l c r r r r r r r r r r}
+\toprule
+protocol & & $N$ & \multicolumn{4}{c}{calls of Algorithm~\ref{alg:loop}} & \multicolumn{2}{c}{CPSA runs} & B1 & B2 & B3\\
+\cmidrule(lr){4-7}\cmidrule(lr){8-9}
+ & & & as found & pruned & least & shrink & as found & shrink & & &\\
+\midrule
+signed CR & A & 3 & 5 & 3 & 3 & 6 & -- & -- & 8 & -- & --\\
+\quad two-key variant & A & 4 & 4 & 4 & 4 & 5 & -- & -- & 8 & -- & --\\
+Needham--Schroeder & A & 1 & 2 & 2 & 1 & 2 & -- & -- & 4 & -- & --\\
+\quad with channels & A & 3 & 4 & 4 & 3 & 6 & -- & -- & 64 & -- & --\\
+\quad Lowe's fix & A & 2 & 2 & 2 & 2 & 3 & -- & -- & 4 & -- & --\\
+\textsc{pkinit} (flawed) & C & 1 & 2 & -- & -- & 2 & 2{+}3 & 2{+}2 & 4 & 4 & 1\\
+\quad adopted fix & C & 2 & 2 & -- & -- & 3 & 2{+}2 & 3{+}2 & 4 & 3 & 3\\
+ISO 9798-3 (flawed) & C & 1 & 2 & -- & -- & 2 & 2{+}7 & 2{+}4 & 16 & 16 & 1\\
+\quad corrected & C & 2 & 2 & -- & -- & 3 & 2{+}4 & 3{+}4 & 16 & 9 & 5\\
+Blanchet & C & 1 & 4 & -- & -- & 3 & 4{+}12 & 3{+}5 & 16 & 16 & 1\\
+\quad fixed & C & 5 & 6 & -- & -- & 6 & 6{+}13 & 6{+}11 & 16 & 16 & 5\\
+Otway--Rees & C & 1 & 2 & -- & -- & 2 & 2{+}37 & 2{+}4 & 16 & 16 & 1\\
+\quad with $A \neq B$ & C & 4 & 4 & -- & -- & 5 & 4{+}47 & 5{+}47 & 16 & 15 & 5\\
+Yahalom & C & 3 & 3 & -- & -- & 4 & 3{+}10 & 4{+}10 & 16 & 13 & 5\\
+Denning--Sacco & C & 2 & 3 & -- & -- & 4 & 3{+}37 & 4{+}11 & 32 & 17 & 6\\
+Neuman--Stubblebine & C & 3 & 3 & -- & -- & 4 & 3{+}13 & 4{+}13 & 32 & 25 & 6\\
+Kerberos (simplified) & C & 1 & 4 & -- & -- & 3 & 4{+}20 & 3{+}6 & 16 & 16 & 1\\
+\quad agreement on $K$ & C & 3 & 4 & -- & -- & 5 & 4{+}16 & 5{+}12 & 16 & 13 & 5\\
+\bottomrule
+\end{tabular}
+\end{table}

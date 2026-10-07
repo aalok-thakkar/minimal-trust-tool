@@ -1,0 +1,10 @@
+def weakest(oracle):
+    H, memo = [], {}           # minimal attacks so far; trust -> oracle answer
+    while True:
+        for T in blocker(H):   # candidate trusts; blocker([])==[frozenset()]
+            if T not in memo:  # one oracle call per distinct candidate
+                memo[T] = oracle(T)   # None if T achieves chi; else a witness attack
+            if memo[T] is not None:
+                H = minimalize(H + [stops(memo[T])]); break
+        else:
+            return blocker(H)   # all achieve: the weakest trusts

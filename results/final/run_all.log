@@ -1,0 +1,22 @@
+== tests start 2026-10-04 14:28:51 load: 4.28 4.56 4.72
+== tests end   2026-10-04 14:28:57 load: 4.33 4.56 4.72 status: ok
+== diff_core start 2026-10-04 14:28:57 load: 4.33 4.56 4.72
+== diff_core end   2026-10-04 14:28:58 load: 4.33 4.56 4.72 status: ok
+== diff_bounded start 2026-10-04 14:28:58 load: 4.33 4.56 4.72
+== diff_bounded end   2026-10-04 14:38:01 load: 1.87 2.63 3.66 status: ok
+== rows start 2026-10-04 14:38:01 load: 1.87 2.63 3.66
+== rows end   2026-10-04 14:38:05 load: 1.88 2.62 3.65 status: ok
+== channels start 2026-10-04 14:38:05 load: 1.88 2.62 3.65
+== channels end   2026-10-04 14:38:22 load: 1.69 2.54 3.60 status: ok
+== compose start 2026-10-04 14:38:22 load: 1.69 2.54 3.60
+== compose end   2026-10-04 14:38:22 load: 1.69 2.54 3.60 status: ok
+== cpsa start 2026-10-04 14:38:22 load: 1.69 2.54 3.60
+== cpsa end   2026-10-04 14:41:05 load: 3.01 2.60 3.42 status: ok
+== diff_cpsa start 2026-10-04 14:41:05 load: 3.01 2.60 3.42
+== diff_cpsa end   2026-10-04 14:41:05 load: 3.01 2.60 3.42 status: ok
+== scale_counts start 2026-10-04 14:41:05 load: 3.01 2.60 3.42
+== scale_counts end   2026-10-04 15:59:08 load: 4.88 7.12 13.63 status: ok
+== scale_timing start 2026-10-04 15:59:08 load: 4.88 7.12 13.63
+== scale_timing end   2026-10-04 16:45:29 load: 4.37 3.46 4.74 status: ok
+== bound start 2026-10-04 16:45:29 load: 4.37 3.46 4.74
+== bound end   2026-10-04 18:07:22 load: 2.61 2.59 3.25 status: ok

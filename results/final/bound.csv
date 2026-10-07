@@ -1,0 +1,31 @@
+row,witness_mode,instances_per_role,earlier_session,status,W,H,distinct_calls,states_explored,max_states_one_call,time_s,W_changed_vs_default_pool,default_pool
+signed_cr,pruned,1,true,ok,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},3,3202,1601,0.0112,reference,true
+signed_cr,pruned,2,true,ok,"{Non(sk_A), Unq(N)}",{Non(sk_A)}; {Unq(N)},3,3309263,1654631,35.2531,false,false
+signed_cr,pruned,3,true,timeout,,,,,,600.0201,,false
+signed_cr,pruned,1,false,ok,{Non(sk_A)},{Non(sk_A)},2,976,968,0.0038,true,false
+signed_cr,pruned,2,false,ok,{Non(sk_A)},{Non(sk_A)},2,799929,799914,7.5575,true,false
+signed_cr,pruned,3,false,timeout,,,,,,600.0097,,false
+two_key,pruned,1,true,ok,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",4,3247,1085,0.0138,reference,true
+two_key,pruned,2,true,ok,"{Non(k1), Unq(N)}; {Non(k2), Unq(N)}","{Unq(N)}; {Non(k1), Non(k2)}",4,2327293,775768,29.7197,false,false
+two_key,pruned,3,true,timeout,,,,,,600.0075,,false
+two_key,pruned,1,false,ok,{Non(k1)}; {Non(k2)},"{Non(k1), Non(k2)}",3,1324,658,0.0051,true,false
+two_key,pruned,2,false,ok,{Non(k1)}; {Non(k2)},"{Non(k1), Non(k2)}",3,759831,379908,8.6840,true,false
+two_key,pruned,3,false,timeout,,,,,,600.0013,,false
+nspk,pruned,1,false,ok,false,{{}},2,149,146,0.0005,reference,true
+nspk,pruned,2,false,ok,false,{{}},2,414,405,0.0016,false,false
+nspk,pruned,3,false,ok,false,{{}},2,863,848,0.0039,false,false
+nspk,pruned,1,true,ok,false,{{}},2,412,409,0.0010,false,false
+nspk,pruned,2,true,ok,false,{{}},2,863,854,0.0030,false,false
+nspk,pruned,3,true,ok,false,{{}},2,1546,1531,0.0069,false,false
+nspk_channels,pruned,1,false,ok,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",4,545,286,0.0024,reference,true
+nspk_channels,pruned,2,false,ok,"{conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}","{auth(A->B), conf(B->A)}; {Non(sk_A), auth(B->A), conf(B->A)}",7,482837,404616,3.4764,true,false
+nspk_channels,pruned,3,false,timeout,,,,,,600.0094,,false
+nspk_channels,pruned,1,true,ok,{auth(A->B)}; {conf(B->A)},"{auth(A->B), conf(B->A)}",4,1226,636,0.0054,false,false
+nspk_channels,pruned,2,true,ok,"{conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}","{auth(A->B), conf(B->A)}; {Non(sk_A), auth(B->A), conf(B->A)}",7,1570351,1406652,13.9537,true,false
+nspk_channels,pruned,3,true,timeout,,,,,,600.0124,,false
+nsl,pruned,1,false,ok,{Non(sk_A)},{Non(sk_A)},2,289,286,0.0009,reference,true
+nsl,pruned,2,false,ok,{Non(sk_A)},{Non(sk_A)},2,404625,404616,2.5374,false,false
+nsl,pruned,3,false,timeout,,,,,,600.0068,,false
+nsl,pruned,1,true,ok,{Non(sk_A)},{Non(sk_A)},2,639,636,0.0020,false,false
+nsl,pruned,2,true,ok,{Non(sk_A)},{Non(sk_A)},2,1406661,1406652,10.8795,false,false
+nsl,pruned,3,true,timeout,,,,,,600.0042,,false

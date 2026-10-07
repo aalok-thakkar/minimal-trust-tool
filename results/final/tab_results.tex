@@ -1,0 +1,44 @@
+\begin{table}[t]
+\caption{Weakest trust recovered by Algorithm~1 with no assumption chosen by hand, over
+our analyser (A) or CPSA (C), with $\weakest(\chi)$ equal to the minimal sufficient trusts
+found by evaluating all $2^{|U|}$ trusts (for the channel row, at one instance per role). $|\attacks|$ is the number
+of minimal attacks; calls are distinct verifier calls and repl.\ the extra CPSA runs
+that compute $\stops(x)$ (Section~\ref{sec:computing}). $k_{XS}$ is $X$'s long-term key
+shared with the server. Goals: (recent) agreement of the responder with the
+initiator; the client's authentication of the server; secrecy of $d$; the
+initiator's agreement on the session key $K$. $\mathsf{false}$ is the unrealisable answer
+(Remark~\ref{rem:unrealisable}). $^{\dagger}$Two instances per role; with one,
+$\{\auth(A{\to}B)\}$, $\{\conf(B{\to}A)\}$ (Section~\ref{sec:eval}).}
+\label{tab:results}
+\centering
+\setlength{\tabcolsep}{1.6pt}
+\footnotesize
+\begin{tabular}{lcl r l r r r}
+\toprule
+protocol & & goal & $|U|$ & $\weakest(\chi)$ & $|\attacks|$ & calls & repl.\\
+\midrule
+signed CR (Sec.~\ref{sec:example}) & A & rec.\ agr. & 3 & $\{\Non(sk_A), \Unq(N)\}$ & 2 & 3 & --\\
+\quad two-key variant & A & rec.\ agr. & 3 & $\{\Non(k_1), \Unq(N)\}$, & 2 & 4 & --\\
+ & & & & \quad $\{\Non(k_2), \Unq(N)\}$ & & & \\
+Needham--Schroeder & A & agr. & 2 & $\mathsf{false}$ & 1 & 2 & --\\
+\quad with channels$^{\dagger}$ & A & agr. & 6 & $\{\conf(B{\to}A)\}$, & 2 & 7 & --\\
+ & & & & \quad $\{\Non(sk_A), \auth(A{\to}B)\}$, & & & \\
+ & & & & \quad $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & & & \\
+\quad Lowe's fix & A & agr. & 2 & $\{\Non(sk_A)\}$ & 1 & 2 & --\\
+\textsc{pkinit} (flawed) & C & auth. & 2 & $\mathsf{false}$ & 1 & 2 & 3\\
+\quad adopted fix & C & auth. & 2 & $\{\Non(sk(S))\}$ & 1 & 2 & 2\\
+ISO 9798-3 (flawed) & C & agr. & 4 & $\mathsf{false}$ & 1 & 2 & 7\\
+\quad corrected & C & agr. & 4 & $\{\Non(sk_A)\}$ & 1 & 2 & 4\\
+Blanchet & C & secr.\ $d$ & 4 & $\mathsf{false}$ & 1 & 4 & 12\\
+\quad fixed & C & secr.\ $d$ & 4 & $\{\Non(sk_A), \Non(sk_B),$ & 4 & 6 & 13\\
+ & & & & \quad $\Unq(d), \Unq(s)\}$ & & & \\
+Otway--Rees & C & agr. & 4 & $\mathsf{false}$ & 1 & 2 & 37\\
+\quad with $A \neq B$ & C & agr. & 4 & $\{\Non(k_{AS}), \Non(k_{BS}), \Unq(n_B)\}$ & 3 & 4 & 47\\
+Yahalom & C & agr. & 4 & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & 3 & 10\\
+Denning--Sacco & C & agr. & 5 & $\{\Non(sk_A)\}$ & 1 & 3 & 37\\
+Neuman--Stubblebine & C & agr. & 5 & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & 3 & 13\\
+Kerberos (simplified) & C & init.\ agr. & 4 & $\mathsf{false}$ & 1 & 4 & 20\\
+\quad agreement on $K$ & C & agr.\ $K$ & 4 & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & 4 & 16\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,16 @@
+=== woolam  U=['non_ltk_as']
+  T={}: fails  [0.02s, shapes=1, skeletons=3]
+  T=['non_ltk_as']: achieves  [0.02s, shapes=1, skeletons=4]
+  lattice: 2 points, 0.04s total, max 0.02s, complete=True, W=[['non_ltk_as']], A=[['non_ltk_as']], monotone=True
+     O({}) = fails: shape label 2, stops(x) = ['non_ltk_as']  checks: {'non_ltk_as': 'unrealized'}
+     O(['non_ltk_as']) = achieves   [1 shape(s), 0.02s]
+  loop[ref_as_found]: {'W': [['non_ltk_as']], 'H': [['non_ltk_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 1, 'cpsa_goal_time': 0.035, 'cpsa_replay_time': 0.018, 'wall': 0.056, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 2, stops(x) = ['non_ltk_as']  checks: {'non_ltk_as': 'unrealized'}
+     O(['non_ltk_as']) = achieves   [1 shape(s), 0.02s]
+  loop[ref_shrink]: {'W': [['non_ltk_as']], 'H': [['non_ltk_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 1, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 1, 'cpsa_goal_time': 0.035, 'cpsa_replay_time': 0.017, 'wall': 0.055, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 2, stops(x) = ['non_ltk_as']  checks: {'non_ltk_as': 'unrealized'}
+     O(['non_ltk_as']) = achieves   [1 shape(s), 0.02s]
+  loop[fixed_as_found]: {'W': [['non_ltk_as']], 'H': [['non_ltk_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 1, 'cpsa_goal_time': 0.035, 'cpsa_replay_time': 0.017, 'wall': 0.055, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 2, stops(x) = ['non_ltk_as']  checks: {'non_ltk_as': 'unrealized'}
+     O(['non_ltk_as']) = achieves   [1 shape(s), 0.02s]
+  loop[fixed_shrink]: {'W': [['non_ltk_as']], 'H': [['non_ltk_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 1, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 1, 'cpsa_goal_time': 0.033, 'cpsa_replay_time': 0.017, 'wall': 0.053, 'agrees': True, 'H_equals_A': True}

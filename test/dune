@@ -1,0 +1,27 @@
+(test
+ (name test_trust)
+ (modules test_trust)
+ (libraries trust))
+
+(executable
+ (name diff_python)
+ (modules diff_python)
+ (libraries trust))
+
+(test
+ (name test_cpsa)
+ (modules test_cpsa)
+ (libraries trust unix)
+ (deps
+  (glob_files data/*.out)
+  (glob_files ../cpsa/protocols/*.scm)))
+
+(executable
+ (name diff_bounded)
+ (modules diff_bounded)
+ (libraries trust))
+
+(test
+ (name test_bounded)
+ (modules test_bounded)
+ (libraries trust))

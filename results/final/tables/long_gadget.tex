@@ -1,0 +1,43 @@
+\begin{table}[tbp]
+\caption{Gadget check: for each hypergraph (edges over candidate assumptions $0, \dots, n-1$) the protocol of the reduction in the proof of Theorem~\ref{thm:cost}, decided by exhaustive bounded Dolev--Yao search, against the hypergraph oracle (``does $T$ meet every edge''). Agree: trusts on which both give the same verdict and, on failure, the gadget's stopping set is an edge disjoint from $T$. Loop: Algorithm~\ref{alg:loop} over the gadget oracle returns the blocker of the edges and recovers the edges as $\attacks$; calls are its distinct calls. Time in seconds for the whole check.}
+\label{tab:gadget}
+\centering
+\setlength{\tabcolsep}{3pt}
+\scriptsize
+\begin{tabular}{l r l r r r c r r}
+\toprule
+instance & $n$ & edges & $|\attacks|$ & $|\weakest|$ & agree & loop & calls & time (s)\\
+\midrule
+fixed-1 & 4 & $\{3\}, \{0,1\}, \{1,2\}$ & 3 & 2 & 16/16 & yes & 5 & 0.060\\
+fixed-2 & 4 & $\{0\}, \{1,2,3\}$ & 2 & 3 & 16/16 & yes & 5 & 0.0060\\
+fixed-3 & 4 & $\{0,1\}, \{2,3\}$ & 2 & 4 & 16/16 & yes & 6 & 0.0060\\
+fixed-4 & 5 & $\{0,4\}, \{2,3\}, \{0,1,2\}$ & 3 & 4 & 32/32 & yes & 7 & 0.204\\
+fixed-5 & 5 & $\{0,3\}, \{2,3\}, \{3,4\}, \{0,2,4\}$ & 4 & 4 & 32/32 & yes & 8 & 5.3\\
+rand-n4-s0 & 4 & $\{2\}, \{1,3\}$ & 2 & 2 & 16/16 & yes & 4 & 0.0050\\
+rand-n4-s1 & 4 & $\{1,2\}, \{0,2,3\}$ & 2 & 3 & 16/16 & yes & 5 & 0.0070\\
+rand-n4-s2 & 4 & $\{3\}$ & 1 & 1 & 16/16 & yes & 2 & 0.0010\\
+rand-n4-s3 & 4 & $\{0\}, \{1,2\}$ & 2 & 2 & 16/16 & yes & 4 & 0.0040\\
+rand-n4-s4 & 4 & $\{2\}, \{0,1\}$ & 2 & 2 & 16/16 & yes & 4 & 0.0040\\
+rand-n4-s5 & 4 & $\{1,3\}, \{0,2,3\}$ & 2 & 3 & 16/16 & yes & 5 & 0.0070\\
+rand-n4-s6 & 4 & $\{1\}, \{2\}$ & 2 & 1 & 16/16 & yes & 3 & 0.0030\\
+rand-n4-s7 & 4 & $\{0,3\}, \{0,1,2\}$ & 2 & 3 & 16/16 & yes & 5 & 0.0070\\
+rand-n5-s0 & 5 & $\{0\}, \{1\}, \{2,4\}$ & 3 & 2 & 32/32 & yes & 5 & 0.069\\
+rand-n5-s1 & 5 & $\{0\}, \{1\}, \{2,3,4\}$ & 3 & 3 & 32/32 & yes & 6 & 0.090\\
+rand-n5-s2 & 5 & $\{1,3\}, \{0,1,2\}, \{1,2,4\}$ & 3 & 3 & 32/32 & yes & 6 & 0.246\\
+rand-n5-s3 & 5 & $\{2\}, \{0,4\}, \{1,3,4\}$ & 3 & 3 & 32/32 & yes & 6 & 0.131\\
+rand-n5-s4 & 5 & $\{0\}, \{4\}, \{2,3\}$ & 3 & 2 & 32/32 & yes & 5 & 0.069\\
+rand-n5-s5 & 5 & $\{0,3\}, \{0,1,2\}, \{1,2,4\}$ & 3 & 5 & 32/32 & yes & 8 & 0.260\\
+rand-n5-s6 & 5 & $\{0,2\}, \{3,4\}, \{1,2,4\}$ & 3 & 4 & 32/32 & yes & 7 & 0.201\\
+rand-n5-s7 & 5 & $\{0\}, \{1,3\}, \{2,3,4\}$ & 3 & 3 & 32/32 & yes & 6 & 0.132\\
+rand-n6-s0 & 6 & $\{1\}, \{3,4\}$ & 2 & 2 & 64/64 & yes & 4 & 0.015\\
+rand-n6-s1 & 6 & $\{0\}, \{1\}, \{3\}, \{5\}$ & 4 & 1 & 64/64 & yes & 5 & 1.1\\
+rand-n6-s2 & 6 & $\{3\}, \{1,2,5\}$ & 2 & 3 & 64/64 & yes & 5 & 0.018\\
+rand-n6-s3 & 6 & $\{3\}, \{4\}$ & 2 & 1 & 64/64 & yes & 3 & 0.011\\
+rand-n6-s4 & 6 & $\{0\}, \{2\}, \{3\}$ & 3 & 1 & 64/64 & yes & 4 & 0.083\\
+rand-n6-s5 & 6 & $\{1,5\}, \{3,5\}, \{0,2,3\}$ & 3 & 4 & 64/64 & yes & 7 & 0.390\\
+rand-n6-s6 & 6 & $\{0\}, \{1\}$ & 2 & 1 & 64/64 & yes & 3 & 0.012\\
+rand-n6-s7 & 6 & $\{4\}$ & 1 & 1 & 64/64 & yes & 2 & 0.0030\\
+stress-n6-m6 & 6 & $\{0,1\}, \{0,5\}, \{1,4\}, \{0,3,4\}, \{2,3,5\}$ & 5 & 8 & 64/64 & yes & 13 & 329\\
+\bottomrule
+\end{tabular}
+\end{table}

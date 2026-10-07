@@ -1,0 +1,60 @@
+\begin{table}[tbp]
+\caption{Sensitivity of $\weakest(\chi)$ to the analyser's pool: instances per role, with or without one earlier completed session whose transcript the adversary holds (pruned witnesses, reduced search). ``same'' means equal to the one-instance answer with the same session setting. States are summed over all calls of one run of Algorithm~\ref{alg:loop}; time is the wall-clock time of that run in seconds, with a limit of 600\,s.}
+\label{tab:bound}
+\centering
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabular}{l c c l r r r}
+\toprule
+row & earlier & inst. & $\weakest(\chi)$ & calls & states & time (s)\\
+\midrule
+signed CR & yes & 1 & $\{\Non(sk_A), \Unq(N)\}$ & 3 & 3\,202 & 0.011\\
+ &  & 2 & same & 3 & 3\,309\,263 & 35.3\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+signed CR & no & 1 & $\{\Non(sk_A)\}$ & 2 & 976 & 0.0038\\
+ &  & 2 & same & 2 & 799\,929 & 7.6\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+two-key variant & yes & 1 & $\{\Non(k_1), \Unq(N)\}$, & 4 & 3\,247 & 0.014\\
+ & & & $\{\Non(k_2), \Unq(N)\}$ & & & \\
+ &  & 2 & same & 4 & 2\,327\,293 & 29.7\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+two-key variant & no & 1 & $\{\Non(k_1)\}$, & 3 & 1\,324 & 0.0051\\
+ & & & $\{\Non(k_2)\}$ & & & \\
+ &  & 2 & same & 3 & 759\,831 & 8.7\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+Needham--Schroeder & yes & 1 & $\mathsf{false}$ & 2 & 412 & 0.0010\\
+ &  & 2 & same & 2 & 863 & 0.0030\\
+ &  & 3 & same & 2 & 1\,546 & 0.0069\\
+\addlinespace[2pt]
+Needham--Schroeder & no & 1 & $\mathsf{false}$ & 2 & 149 & 0.0005\\
+ &  & 2 & same & 2 & 414 & 0.0016\\
+ &  & 3 & same & 2 & 863 & 0.0039\\
+\addlinespace[2pt]
+N--S with channels & yes & 1 & $\{\auth(A{\to}B)\}$, & 4 & 1\,226 & 0.0054\\
+ & & & $\{\conf(B{\to}A)\}$ & & & \\
+ &  & 2 & $\{\conf(B{\to}A)\}$, & 7 & 1\,570\,351 & 14.0\\
+ & & & $\{\Non(sk_A), \auth(A{\to}B)\}$, & & & \\
+ & & & $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & & & \\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+N--S with channels & no & 1 & $\{\auth(A{\to}B)\}$, & 4 & 545 & 0.0024\\
+ & & & $\{\conf(B{\to}A)\}$ & & & \\
+ &  & 2 & $\{\conf(B{\to}A)\}$, & 7 & 482\,837 & 3.5\\
+ & & & $\{\Non(sk_A), \auth(A{\to}B)\}$, & & & \\
+ & & & $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & & & \\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+Lowe's fix & yes & 1 & $\{\Non(sk_A)\}$ & 2 & 639 & 0.0020\\
+ &  & 2 & same & 2 & 1\,406\,661 & 10.9\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\addlinespace[2pt]
+Lowe's fix & no & 1 & $\{\Non(sk_A)\}$ & 2 & 289 & 0.0009\\
+ &  & 2 & same & 2 & 404\,625 & 2.5\\
+ &  & 3 & \multicolumn{3}{l}{timeout} & 600\\
+\bottomrule
+\end{tabular}
+\end{table}

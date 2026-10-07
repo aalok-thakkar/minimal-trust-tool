@@ -1,0 +1,614 @@
+{
+ "name": "neuman-stubblebine",
+ "meta": {
+  "name": [
+   "neuman-stubblebine"
+  ],
+  "source": [
+   "tst/neuman-stubblebine.scm (defprotocol neuman-stubblebine), protocol text unchanged"
+  ],
+  "goal": [
+   "written: responder agreement with the initiator on (a, b, k)"
+  ]
+ },
+ "U": {
+  "non_ltk_aks": "(non (ltk a ks))",
+  "non_ltk_bks": "(non (ltk b ks))",
+  "uniq_ra": "(uniq ra)",
+  "uniq_rb": "(uniq rb)",
+  "uniq_tb": "(uniq tb)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0168,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_ra"
+    ],
+    "time": 0.0164,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_rb"
+    ],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_tb"
+    ],
+    "time": 0.0161,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks"
+    ],
+    "time": 0.044,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 12,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_ra"
+    ],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_rb"
+    ],
+    "time": 0.018,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_tb"
+    ],
+    "time": 0.018,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_ra"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_rb"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_tb"
+    ],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_ra",
+     "uniq_rb"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_ra",
+     "uniq_tb"
+    ],
+    "time": 0.0169,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_ra"
+    ],
+    "time": 0.0435,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 12,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_rb"
+    ],
+    "time": 0.0565,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 12,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_tb"
+    ],
+    "time": 0.031,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 7,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_ra",
+     "uniq_rb"
+    ],
+    "time": 0.0191,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_ra",
+     "uniq_tb"
+    ],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0165,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_rb"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_tb"
+    ],
+    "time": 0.0185,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_ra",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0174,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_rb"
+    ],
+    "time": 0.0536,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 12,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_tb"
+    ],
+    "time": 0.0302,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 7,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0314,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 7,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_ra",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0187,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0189,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_ra",
+     "uniq_rb",
+     "uniq_tb"
+    ],
+    "time": 0.0313,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 7,
+    "warnings": []
+   }
+  ],
+  "n_points": 32,
+  "all_complete": true,
+  "total_time": 0.751,
+  "max_time": 0.057,
+  "monotone": true,
+  "n_sufficient": 8,
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "A": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 3,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 13,
+  "cpsa_goal_time": 0.079,
+  "cpsa_replay_time": 0.304,
+  "wall": 0.401,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 3,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 13,
+  "cpsa_goal_time": 0.12,
+  "cpsa_replay_time": 0.296,
+  "wall": 0.436,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 3,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 13,
+  "cpsa_goal_time": 0.087,
+  "cpsa_replay_time": 0.298,
+  "wall": 0.403,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 3,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 13,
+  "cpsa_goal_time": 0.108,
+  "cpsa_replay_time": 0.314,
+  "wall": 0.443,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

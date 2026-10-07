@@ -1,0 +1,8 @@
+machine: Apple M3 Max, 14 cores, 36 GB
+os: macOS 26.5.2
+ocaml: The OCaml toplevel, version 5.1.0
+dune: 3.19.1
+cpsa: CPSA 4.4.9
+sources sha256: 12dda0ec723bdef1e34db2ff4f58f1fd72b84c41a56df2188ed597cd85cccabb
+started: 2026-10-04 14:28:50
+finished: 2026-10-04 18:07:22

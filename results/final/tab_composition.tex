@@ -1,0 +1,18 @@
+\begin{table}[t]
+\caption{Composition (Theorem~\ref{thm:composition}) of the signed challenge-response
+($\chi_1$) with an attestation service ($\chi_2$). Last column: minimal attacks of the
+composition that contain no component's minimal attack.}
+\label{tab:composition}
+\centering
+\setlength{\tabcolsep}{3pt}
+\footnotesize
+\begin{tabular}{p{2.0cm} p{3.1cm} p{3.1cm} p{2.6cm}}
+\toprule
+pair & join of components & composition & cross-protocol\\
+\midrule
+tagged, shared $sk_A$ & $\{\Non(sk_A), \Unq(N)\}$ & $\{\Non(sk_A), \Unq(N)\}$ & none\\
+untagged, shared $sk_A$ & $\{\Non(sk_A), \Unq(N)\}$ & $\mathsf{false}$ & $\{\Non(sk_C)\}$ on $\chi_1$, $\emptyset$ on $\chi_2$\\
+separate keys & $\{\Non(sk_A), \Non(sk'_A),$ $\Unq(N)\}$ & $\{\Non(sk_A), \Non(sk'_A),$ $\Unq(N)\}$ & none\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,4 @@
+pkinit-flawed: 4 lattice points, 0 sufficient, MinTrust = EMPTY = false  (0.09s)
+pkinit-fix2: 4 lattice points, 2 sufficient, MinTrust = [['non_as']]  (0.08s)
+yahalom: 16 lattice points, 4 sufficient, MinTrust = [['non_ltk_ac', 'non_ltk_bc']]  (0.75s)
+python3 cpsa/lattice_check.py  0.55s user 0.10s system 68% cpu 0.941 total

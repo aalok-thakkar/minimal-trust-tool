@@ -1,0 +1,62 @@
+=== kerberos-sortrule  U=['non_ltk_aks', 'non_ltk_bks', 'uniq_t', 'uniq_tp', 'uniq_l']
+  T={}: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_ltk_aks']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['uniq_t']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_tp']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_l']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_ltk_aks', 'non_ltk_bks']: fails  [0.14s, shapes=6, skeletons=23]
+  T=['non_ltk_aks', 'uniq_t']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_aks', 'uniq_tp']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_aks', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_t']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_tp']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['uniq_t', 'uniq_tp']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_t', 'uniq_l']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['uniq_tp', 'uniq_l']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_t']: fails  [0.28s, shapes=6, skeletons=56]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_tp']: fails  [0.16s, shapes=6, skeletons=23]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_l']: fails  [0.15s, shapes=6, skeletons=23]
+  T=['non_ltk_aks', 'uniq_t', 'uniq_tp']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_aks', 'uniq_t', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_aks', 'uniq_tp', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_t', 'uniq_tp']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_t', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_tp', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['uniq_t', 'uniq_tp', 'uniq_l']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_t', 'uniq_tp']: fails  [0.31s, shapes=6, skeletons=56]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_t', 'uniq_l']: fails  [0.29s, shapes=6, skeletons=56]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_tp', 'uniq_l']: fails  [0.16s, shapes=6, skeletons=23]
+  T=['non_ltk_aks', 'uniq_t', 'uniq_tp', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_bks', 'uniq_t', 'uniq_tp', 'uniq_l']: fails  [0.02s, shapes=2, skeletons=3]
+  T=['non_ltk_aks', 'non_ltk_bks', 'uniq_t', 'uniq_tp', 'uniq_l']: fails  [0.32s, shapes=6, skeletons=56]
+  lattice: 32 points, 2.21s total, max 0.32s, complete=True, W=[], A=[[]], monotone=True
+     O({}) = fails: shape label 0, stops(x) = ['non_ltk_aks', 'non_ltk_bks']  checks: {'non_ltk_aks': 'unrealized', 'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks']) = fails: shape label 1, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks']) = fails: shape label 2, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_bks']) = fails: shape label 1, stops(x) = ['non_ltk_aks']  checks: {'non_ltk_aks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_bks']) = fails: shape label 2, stops(x) = ['non_ltk_aks']  checks: {'non_ltk_aks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'non_ltk_bks']) = fails: shape label 20, stops(x) = {}  checks: {'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'non_ltk_bks']) = fails: shape label 22, stops(x) = {}  checks: {'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+  loop[ref_as_found]: {'W': [], 'H': [[]], 'distinct_calls': 4, 'total_calls': 4, 'shrink_calls': 0, 'cpsa_goal_runs': 4, 'cpsa_replay_runs': 27, 'cpsa_goal_time': 0.193, 'cpsa_replay_time': 0.88, 'wall': 1.105, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_ltk_aks', 'non_ltk_bks']  checks: {'non_ltk_aks': 'unrealized', 'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 1, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized'}
+     O(['non_ltk_aks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 2, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized'}
+     O(['non_ltk_aks', 'non_ltk_bks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 29, stops(x) = {}  checks: {}
+     O(['non_ltk_aks', 'non_ltk_bks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 38, stops(x) = {}  checks: {}
+  loop[ref_shrink]: {'W': [], 'H': [[]], 'distinct_calls': 3, 'total_calls': 1, 'shrink_calls': 2, 'cpsa_goal_runs': 3, 'cpsa_replay_runs': 7, 'cpsa_goal_time': 0.363, 'cpsa_replay_time': 0.446, 'wall': 0.84, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_ltk_aks', 'non_ltk_bks']  checks: {'non_ltk_aks': 'unrealized', 'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks']) = fails: shape label 1, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks']) = fails: shape label 2, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_bks']) = fails: shape label 1, stops(x) = ['non_ltk_aks']  checks: {'non_ltk_aks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_bks']) = fails: shape label 2, stops(x) = ['non_ltk_aks']  checks: {'non_ltk_aks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'non_ltk_bks']) = fails: shape label 20, stops(x) = {}  checks: {'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'non_ltk_bks']) = fails: shape label 22, stops(x) = {}  checks: {'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+  loop[fixed_as_found]: {'W': [], 'H': [[]], 'distinct_calls': 4, 'total_calls': 4, 'shrink_calls': 0, 'cpsa_goal_runs': 4, 'cpsa_replay_runs': 27, 'cpsa_goal_time': 0.191, 'cpsa_replay_time': 0.896, 'wall': 1.121, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_ltk_aks', 'non_ltk_bks']  checks: {'non_ltk_aks': 'unrealized', 'non_ltk_bks': 'unrealized', 'uniq_l': 'realized', 'uniq_t': 'realized', 'uniq_tp': 'realized'}
+     O(['non_ltk_aks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 1, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized'}
+     O(['non_ltk_aks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 2, stops(x) = ['non_ltk_bks']  checks: {'non_ltk_bks': 'unrealized'}
+     O(['non_ltk_aks', 'non_ltk_bks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 29, stops(x) = {}  checks: {}
+     O(['non_ltk_aks', 'non_ltk_bks', 'uniq_l', 'uniq_t', 'uniq_tp']) = fails: shape label 38, stops(x) = {}  checks: {}
+  loop[fixed_shrink]: {'W': [], 'H': [[]], 'distinct_calls': 3, 'total_calls': 1, 'shrink_calls': 2, 'cpsa_goal_runs': 3, 'cpsa_replay_runs': 7, 'cpsa_goal_time': 0.355, 'cpsa_replay_time': 0.456, 'wall': 0.839, 'agrees': True, 'H_equals_A': True}

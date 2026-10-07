@@ -1,0 +1,29 @@
+\begin{table}[t]
+\caption{Algorithm~1 against brute force on instances from the reduction of
+the proof of Theorem~\ref{thm:cost}. Random rows aggregate ten seeds: medians, with the maximum
+of $|\weakest|$ in parentheses. Calls are distinct oracle calls; in every run they
+equal $|\attacks|+|\weakest|$. Time is the median wall-clock time of Algorithm~1 in
+seconds (median of repetitions per seed). B1 queries all $2^n$ trusts (run for $n \le
+24$); B2 enumerates trusts by size, skipping supersets of sufficient trusts found so
+far, with a budget of $2^{21}$ calls; B3 is the conjunct-dropping heuristic of~\cite{rowe}, and
+its column counts the seeds whose single answer is in $\weakest$.}
+\label{tab:scale}
+\centering
+\setlength{\tabcolsep}{2.4pt}
+\footnotesize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+instance & $n$ & $|\attacks|$ & $|\weakest|$ & calls & time (s) & B1 calls & B2 calls & B3\\
+\midrule
+random, $m=n$                & 20 & 11 & 18 (40) & 28 & 0.0002 & 1\,048\,576 & 1\,041\,651 & 10/10\\
+random, $m=n$                & 55 & 33 & 684 (29\,886) & 716 & 0.081 & -- & $>2^{21}$ & 10/10\\
+random, $m=2n$               & 20 & 14 & 4 (10) & 16 & 0.0001 & 1\,048\,576 & 1\,047\,940 & 10/10\\
+random, $m=2n$               & 70 & 55 & 2\,070 (10\,056) & 2\,125 & 1.2 & -- & $>2^{21}$ & 10/10\\
+random, $m=4n$               & 80 & 68 & 40 (375) & 108 & 0.0042 & -- & $>2^{21}$ & 10/10\\
+disjoint pairs               & 24 & 12 & 4\,096 & 4\,108 & 0.026 & 16\,777\,216 & $>2^{21}$ & 1/1\\
+dual of pairs                & 22 & 2\,048 & 11 & 2\,059 & 109 & -- & 177\,158 & 1/1\\
+all $\frac{n}{2}$-sets       & 12 & 924 & 792 & 1\,716 & 43.6 & 4\,096 & 3\,302 & 1/1\\
+all $(\frac{n}{2}{+}1)$-sets & 12 & 792 & 924 & 1\,716 & 31.2 & 4\,096 & 2\,510 & 1/1\\
+\bottomrule
+\end{tabular}
+\end{table}

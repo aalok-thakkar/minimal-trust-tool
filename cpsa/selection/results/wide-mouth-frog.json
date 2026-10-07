@@ -1,0 +1,249 @@
+{
+ "name": "wide-mouth-frog",
+ "meta": {
+  "name": [
+   "wide-mouth-frog"
+  ],
+  "source": [
+   "tst/wide-mouth-frog.lsp (defprotocol wide-mouth-frog), protocol text unchanged; the file's herald sets (bound 8), not used here (defaults only)"
+  ],
+  "goal": [
+   "written: responder agreement with the initiator on (a, b, t, k)"
+  ]
+ },
+ "U": {
+  "non_ltk_at": "(non (ltk a t))",
+  "non_ltk_bt": "(non (ltk b t))",
+  "uniq_k": "(uniq k)",
+  "uniq_tb": "(uniq tb)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0206,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_at"
+    ],
+    "time": 0.0199,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bt"
+    ],
+    "time": 0.019,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_k"
+    ],
+    "time": 0.0192,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_tb"
+    ],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "non_ltk_bt"
+    ],
+    "time": 60.0064,
+    "timeout": true,
+    "complete": false,
+    "verdict": null,
+    "warnings": [
+     "timeout > 60 s"
+    ]
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "uniq_k"
+    ],
+    "time": 0.0183,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "uniq_tb"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bt",
+     "uniq_k"
+    ],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bt",
+     "uniq_tb"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_k",
+     "uniq_tb"
+    ],
+    "time": 0.0178,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "non_ltk_bt",
+     "uniq_k"
+    ],
+    "time": 60.0054,
+    "timeout": true,
+    "complete": false,
+    "verdict": null,
+    "warnings": [
+     "timeout > 60 s"
+    ]
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "non_ltk_bt",
+     "uniq_tb"
+    ],
+    "time": 60.0053,
+    "timeout": true,
+    "complete": false,
+    "verdict": null,
+    "warnings": [
+     "timeout > 60 s"
+    ]
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "uniq_k",
+     "uniq_tb"
+    ],
+    "time": 0.0167,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bt",
+     "uniq_k",
+     "uniq_tb"
+    ],
+    "time": 0.0165,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_at",
+     "non_ltk_bt",
+     "uniq_k",
+     "uniq_tb"
+    ],
+    "time": 60.0045,
+    "timeout": true,
+    "complete": false,
+    "verdict": null,
+    "warnings": [
+     "timeout > 60 s"
+    ]
+   }
+  ],
+  "n_points": 16,
+  "all_complete": false,
+  "total_time": 240.241,
+  "max_time": 60.006
+ }
+}

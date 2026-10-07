@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up OCaml 5.1
+        uses: ocaml/setup-ocaml@v3
+        with:
+          ocaml-compiler: "5.1"
+
+      - name: Install dependencies
+        run: opam install . --deps-only --with-test
+
+      - name: Build
+        run: opam exec -- dune build --profile release
+
+      - name: Test (CPSA integration tests skip without cpsa4)
+        run: opam exec -- dune test --force
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Differential test, Clutter and Loop
+        run: opam exec -- sh test/diff_python.sh
+
+      - name: Differential test, CPSA rows against the published data
+        run: python3 -B test/diff_cpsa.py results/final/cpsa_rows.csv
+
+      - name: Differential test, bounded analyser
+        run: opam exec -- sh test/diff_bounded.sh
+        timeout-minutes: 60
+
+      - name: Regenerate tables from the published data
+        run: |
+          python3 scripts/make_tables.py results/final
+          python3 scripts/scale_table.py results/final
+          python3 scripts/scale_table.py --short results/final
+          python3 scripts/make_tables_long.py results/final
+          git diff --exit-code -- results/final

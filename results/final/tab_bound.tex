@@ -1,0 +1,25 @@
+\begin{table}[t]
+\caption{Sensitivity of $\weakest(\chi)$ to the analyser's pool: instances per role,
+with or without one earlier completed session. ``same'' means equal to the
+one-instance answer with the same session setting; ``t/o'' a run over 600\,s.}
+\label{tab:bound}
+\centering
+\setlength{\tabcolsep}{2pt}
+\footnotesize
+\begin{tabular}{l c p{2.9cm} p{3.3cm} c}
+\toprule
+row & earlier & 1 instance & 2 instances & 3\\
+\midrule
+signed CR & yes & $\{\Non(sk_A), \Unq(N)\}$ & same & t/o\\
+signed CR & no & $\{\Non(sk_A)\}$ & same & t/o\\
+two-key variant & yes & $\{\Non(k_1), \Unq(N)\}$, $\{\Non(k_2), \Unq(N)\}$ & same & t/o\\
+two-key variant & no & $\{\Non(k_1)\}$, $\{\Non(k_2)\}$ & same & t/o\\
+Needham--Schroeder & yes & $\mathsf{false}$ & same & same\\
+Needham--Schroeder & no & $\mathsf{false}$ & same & same\\
+N--S with channels & yes & $\{\auth(A{\to}B)\}$, $\{\conf(B{\to}A)\}$ & $\{\conf(B{\to}A)\}$, $\{\Non(sk_A), \auth(A{\to}B)\}$, $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & t/o\\
+N--S with channels & no & $\{\auth(A{\to}B)\}$, $\{\conf(B{\to}A)\}$ & $\{\conf(B{\to}A)\}$, $\{\Non(sk_A), \auth(A{\to}B)\}$, $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & t/o\\
+Lowe's fix & yes & $\{\Non(sk_A)\}$ & same & t/o\\
+Lowe's fix & no & $\{\Non(sk_A)\}$ & same & t/o\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,20 @@
+=== pkinit-fix2  U=['non_as', 'non_c']
+  T={}: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_as']: achieves  [0.02s, shapes=1, skeletons=2]
+  T=['non_c']: fails  [0.02s, shapes=1, skeletons=1]
+  T=['non_as', 'non_c']: achieves  [0.02s, shapes=1, skeletons=5]
+  lattice: 4 points, 0.07s total, max 0.02s, complete=True, W=[['non_as']], A=[['non_as']], monotone=True
+     O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+     O(['non_as']) = achieves   [1 shape(s), 0.02s]
+  loop[ref_as_found]: {'W': [['non_as']], 'H': [['non_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 2, 'cpsa_goal_time': 0.038, 'cpsa_replay_time': 0.037, 'wall': 0.078, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+     O(['non_as', 'non_c']) = achieves   [1 shape(s), 0.02s]
+     O(['non_as']) = achieves   [1 shape(s), 0.02s]
+  loop[ref_shrink]: {'W': [['non_as']], 'H': [['non_as']], 'distinct_calls': 3, 'total_calls': 2, 'shrink_calls': 1, 'cpsa_goal_runs': 3, 'cpsa_replay_runs': 2, 'cpsa_goal_time': 0.053, 'cpsa_replay_time': 0.035, 'wall': 0.093, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+     O(['non_as']) = achieves   [1 shape(s), 0.02s]
+  loop[fixed_as_found]: {'W': [['non_as']], 'H': [['non_as']], 'distinct_calls': 2, 'total_calls': 2, 'shrink_calls': 0, 'cpsa_goal_runs': 2, 'cpsa_replay_runs': 2, 'cpsa_goal_time': 0.036, 'cpsa_replay_time': 0.035, 'wall': 0.075, 'agrees': True, 'H_equals_A': True}
+     O({}) = fails: shape label 0, stops(x) = ['non_as']  checks: {'non_as': 'unrealized', 'non_c': 'realized'}
+     O(['non_as', 'non_c']) = achieves   [1 shape(s), 0.02s]
+     O(['non_as']) = achieves   [1 shape(s), 0.02s]
+  loop[fixed_shrink]: {'W': [['non_as']], 'H': [['non_as']], 'distinct_calls': 3, 'total_calls': 2, 'shrink_calls': 1, 'cpsa_goal_runs': 3, 'cpsa_replay_runs': 2, 'cpsa_goal_time': 0.051, 'cpsa_replay_time': 0.037, 'wall': 0.092, 'agrees': True, 'H_equals_A': True}

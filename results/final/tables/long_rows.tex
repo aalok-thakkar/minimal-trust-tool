@@ -1,0 +1,51 @@
+\begin{table}[tbp]
+\caption{Every protocol row: candidate assumptions $U$, the weakest trust $\weakest(\chi)$ returned by Algorithm~\ref{alg:loop}, and the number of minimal attacks $|\attacks|$, over our analyser (A) or CPSA (C). ``agrees'' means that in every witness mode (Table~\ref{tab:calls}) the loop returned the minimal sufficient trusts found by evaluating all $2^{|U|}$ trusts with the same oracle; n/c: not checked. $k_{XS}$ is $X$'s long-term key shared with the server. Goals: (recent) agreement of the responder with the initiator; the client's authentication of the server; secrecy of $d$; the initiator's agreement on the names and the session key $K$ (Kerberos), or on $K$ alone (agreement on $K$). $\mathsf{false}$ is the unrealisable answer (Remark~\ref{rem:unrealisable}). The channel row is shown with one instance per role (the pool on which it was checked) and with two (Section~\ref{sec:eval-bound}). The goals and $U$ of the CPSA rows are in Appendix~\ref{app:protocols}.}
+\label{tab:results}
+\centering
+\setlength{\tabcolsep}{2.5pt}
+\footnotesize
+\begin{tabular}{l c l r l l r c}
+\toprule
+protocol & & goal & $|U|$ & $U$ & $\weakest(\chi)$ & $|\attacks|$ & agrees\\
+\midrule
+signed CR & A & rec.\ agr. & 3 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\Non(sk_A), \Unq(N)\}$ & 2 & yes\\
+ & & & & $\Unq(N)$ &  & & \\
+\quad two-key variant & A & rec.\ agr. & 3 & $\Non(k_1)$, $\Non(k_2)$ & $\{\Non(k_1), \Unq(N)\}$, & 2 & yes\\
+ & & & & $\Unq(N)$ & $\{\Non(k_2), \Unq(N)\}$ & & \\
+Needham--Schroeder & A & agr. & 2 & $\Non(sk_A)$, $\Non(sk_B)$ & $\mathsf{false}$ & 1 & yes\\
+\quad with channels & A & agr. & 6 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\auth(A{\to}B)\}$, & 1 & yes\\
+ & & & & $\auth(A{\to}B)$, $\auth(B{\to}A)$ & $\{\conf(B{\to}A)\}$ & & \\
+ & & & & $\conf(A{\to}B)$, $\conf(B{\to}A)$ &  & & \\
+\quad\quad two instances & A & agr. & 6 & & $\{\conf(B{\to}A)\}$, & 2 & n/c\\
+ & & & & & $\{\Non(sk_A), \auth(A{\to}B)\}$, & & \\
+ & & & & & $\{\auth(A{\to}B), \auth(B{\to}A)\}$ & & \\
+\quad Lowe's fix & A & agr. & 2 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\Non(sk_A)\}$ & 1 & yes\\
+\textsc{pkinit} (flawed) & C & auth. & 2 & $\Non(sk(S))$, $\Non(sk(C))$ & $\mathsf{false}$ & 1 & yes\\
+\quad adopted fix & C & auth. & 2 & $\Non(sk(S))$, $\Non(sk(C))$ & $\{\Non(sk(S))\}$ & 1 & yes\\
+ISO 9798-3 (flawed) & C & agr. & 4 & $\Non(sk_A)$, $\Non(sk_B)$ & $\mathsf{false}$ & 1 & yes\\
+ & & & & $\Unq(n_A)$, $\Unq(n_C)$ &  & & \\
+\quad corrected & C & agr. & 4 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\Non(sk_A)\}$ & 1 & yes\\
+ & & & & $\Unq(n_A)$, $\Unq(n_C)$ &  & & \\
+Blanchet & C & secr.\ $d$ & 4 & $\Non(sk_A)$, $\Non(sk_B)$ & $\mathsf{false}$ & 1 & yes\\
+ & & & & $\Unq(s)$, $\Unq(d)$ &  & & \\
+\quad fixed & C & secr.\ $d$ & 4 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\Non(sk_A), \Non(sk_B),$ & 4 & yes\\
+ & & & & $\Unq(s)$, $\Unq(d)$ & $\Unq(d), \Unq(s)\}$ & & \\
+Otway--Rees & C & agr. & 4 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\mathsf{false}$ & 1 & yes\\
+ & & & & $\Unq(M)$, $\Unq(n_B)$ &  & & \\
+\quad with $A \neq B$ & C & agr. & 4 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\{\Non(k_{AS}), \Non(k_{BS}),$ & 3 & yes\\
+ & & & & $\Unq(M)$, $\Unq(n_B)$ & $\Unq(n_B)\}$ & & \\
+Yahalom & C & agr. & 4 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & yes\\
+ & & & & $\Unq(n_A)$, $\Unq(n_B)$ &  & & \\
+Denning--Sacco & C & agr. & 5 & $\Non(sk_A)$, $\Non(sk_B)$ & $\{\Non(sk_A)\}$ & 1 & yes\\
+ & & & & $\Non(sk_{KS})$, $\Unq(K)$ &  & & \\
+ & & & & $\Unq(t_A)$ &  & & \\
+Neuman--Stubblebine & C & agr. & 5 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & yes\\
+ & & & & $\Unq(r_A)$, $\Unq(r_B)$ &  & & \\
+ & & & & $\Unq(t_B)$ &  & & \\
+Kerberos (simplified) & C & init.\ agr. & 4 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\mathsf{false}$ & 1 & yes\\
+ & & & & $\Unq(t)$, $\Unq(t')$ &  & & \\
+\quad agreement on $K$ & C & agr.\ $K$ & 4 & $\Non(k_{AS})$, $\Non(k_{BS})$ & $\{\Non(k_{AS}), \Non(k_{BS})\}$ & 2 & yes\\
+ & & & & $\Unq(t)$, $\Unq(t')$ &  & & \\
+\bottomrule
+\end{tabular}
+\end{table}

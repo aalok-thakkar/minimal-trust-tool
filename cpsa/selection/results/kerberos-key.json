@@ -1,0 +1,379 @@
+{
+ "name": "kerberos-key",
+ "meta": {
+  "name": [
+   "kerberos-key"
+  ],
+  "diagnostic": [
+   "not a row: kerberos with the conclusion weakened to agreement on k alone"
+  ],
+  "source": [
+   "tst/kerberos.scm (defprotocol kerberos), protocol text unchanged"
+  ],
+  "goal": [
+   "written: initiator agreement with some responder strand on k (names not required to match)"
+  ],
+  "note": [
+   "l is the ticket lifetime, not a nonce or timestamp: no uniq atom (first pass had one, see selection/candidates/kerberos-sortrule.scm)"
+  ]
+ },
+ "U": {
+  "non_ltk_aks": "(non (ltk a ks))",
+  "non_ltk_bks": "(non (ltk b ks))",
+  "uniq_t": "(uniq t)",
+  "uniq_tp": "(uniq t-prime)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks"
+    ],
+    "time": 0.0187,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t"
+    ],
+    "time": 0.0178,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_tp"
+    ],
+    "time": 0.0184,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks"
+    ],
+    "time": 0.1384,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 6,
+    "failing_shapes": 0,
+    "skeletons": 23,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_t"
+    ],
+    "time": 0.0179,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_tp"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_t"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_tp"
+    ],
+    "time": 0.0174,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t",
+     "uniq_tp"
+    ],
+    "time": 0.0172,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_t"
+    ],
+    "time": 0.2797,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 6,
+    "failing_shapes": 0,
+    "skeletons": 56,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_tp"
+    ],
+    "time": 0.1536,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 6,
+    "failing_shapes": 0,
+    "skeletons": 23,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "uniq_t",
+     "uniq_tp"
+    ],
+    "time": 0.018,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bks",
+     "uniq_t",
+     "uniq_tp"
+    ],
+    "time": 0.0155,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_aks",
+     "non_ltk_bks",
+     "uniq_t",
+     "uniq_tp"
+    ],
+    "time": 0.2998,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 6,
+    "failing_shapes": 0,
+    "skeletons": 56,
+    "warnings": []
+   }
+  ],
+  "n_points": 16,
+  "all_complete": true,
+  "total_time": 1.084,
+  "max_time": 0.3,
+  "monotone": true,
+  "n_sufficient": 4,
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "A": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 16,
+  "cpsa_goal_time": 0.183,
+  "cpsa_replay_time": 0.517,
+  "wall": 0.724,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 5,
+  "total_calls": 3,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 5,
+  "cpsa_replay_runs": 12,
+  "cpsa_goal_time": 0.492,
+  "cpsa_replay_time": 0.65,
+  "wall": 1.182,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 16,
+  "cpsa_goal_time": 0.18,
+  "cpsa_replay_time": 0.514,
+  "wall": 0.717,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_ltk_aks",
+    "non_ltk_bks"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_aks"
+   ],
+   [
+    "non_ltk_bks"
+   ]
+  ],
+  "distinct_calls": 5,
+  "total_calls": 3,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 5,
+  "cpsa_replay_runs": 12,
+  "cpsa_goal_time": 0.485,
+  "cpsa_replay_time": 0.645,
+  "wall": 1.17,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

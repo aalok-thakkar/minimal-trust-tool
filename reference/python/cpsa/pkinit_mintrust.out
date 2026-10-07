@@ -1,0 +1,15 @@
+
+=== pkinit-flawed ===
+  trust {}: attacked
+  trust ['non_as']: attacked
+  trust ['non_c']: attacked
+  trust ['non_as', 'non_c']: attacked
+  MinTrust = EMPTY (no trust suffices)
+
+=== pkinit-fix2 ===
+  trust {}: attacked
+  trust ['non_as']: ACHIEVES
+  trust ['non_c']: attacked
+  trust ['non_as', 'non_c']: ACHIEVES
+  MinTrust = [['non_as']]
+python3 pkinit_mintrust.py  0.05s user 0.03s system 47% cpu 0.188 total

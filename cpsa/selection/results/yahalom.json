@@ -1,0 +1,373 @@
+{
+ "name": "yahalom",
+ "meta": {
+  "name": [
+   "yahalom"
+  ],
+  "source": [
+   "tst/yahalom.scm (defprotocol yahalom), protocol text unchanged; re-derived from artifact/cpsa/protocols.py"
+  ],
+  "goal": [
+   "written (existing row): responder agreement with the initiator on (a, b, c, k)"
+  ]
+ },
+ "U": {
+  "non_ltk_ac": "(non (ltk a c))",
+  "non_ltk_bc": "(non (ltk b c))",
+  "uniq_na": "(uniq n-a)",
+  "uniq_nb": "(uniq n-b)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0189,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac"
+    ],
+    "time": 0.0192,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bc"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_na"
+    ],
+    "time": 0.0188,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_nb"
+    ],
+    "time": 0.0188,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "non_ltk_bc"
+    ],
+    "time": 0.0435,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 16,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "uniq_na"
+    ],
+    "time": 0.0178,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "uniq_nb"
+    ],
+    "time": 0.0186,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bc",
+     "uniq_na"
+    ],
+    "time": 0.0187,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 4,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bc",
+     "uniq_nb"
+    ],
+    "time": 0.0313,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 5,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_na",
+     "uniq_nb"
+    ],
+    "time": 0.0196,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "non_ltk_bc",
+     "uniq_na"
+    ],
+    "time": 0.0414,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 2,
+    "failing_shapes": 0,
+    "skeletons": 16,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "non_ltk_bc",
+     "uniq_nb"
+    ],
+    "time": 0.2211,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 52,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "uniq_na",
+     "uniq_nb"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_bc",
+     "uniq_na",
+     "uniq_nb"
+    ],
+    "time": 0.0285,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 2,
+    "failing_shapes": 2,
+    "skeletons": 5,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_ltk_ac",
+     "non_ltk_bc",
+     "uniq_na",
+     "uniq_nb"
+    ],
+    "time": 0.1308,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 32,
+    "warnings": []
+   }
+  ],
+  "n_points": 16,
+  "all_complete": true,
+  "total_time": 0.683,
+  "max_time": 0.221,
+  "monotone": true,
+  "n_sufficient": 4,
+  "W": [
+   [
+    "non_ltk_ac",
+    "non_ltk_bc"
+   ]
+  ],
+  "A": [
+   [
+    "non_ltk_ac"
+   ],
+   [
+    "non_ltk_bc"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_ltk_ac",
+    "non_ltk_bc"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_ac"
+   ],
+   [
+    "non_ltk_bc"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 3,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 10,
+  "cpsa_goal_time": 0.079,
+  "cpsa_replay_time": 0.261,
+  "wall": 0.357,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_ltk_ac",
+    "non_ltk_bc"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_ac"
+   ],
+   [
+    "non_ltk_bc"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 3,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 10,
+  "cpsa_goal_time": 0.216,
+  "cpsa_replay_time": 0.26,
+  "wall": 0.501,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_ltk_ac",
+    "non_ltk_bc"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_ac"
+   ],
+   [
+    "non_ltk_bc"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 3,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 10,
+  "cpsa_goal_time": 0.078,
+  "cpsa_replay_time": 0.255,
+  "wall": 0.35,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_ltk_ac",
+    "non_ltk_bc"
+   ]
+  ],
+  "H": [
+   [
+    "non_ltk_ac"
+   ],
+   [
+    "non_ltk_bc"
+   ]
+  ],
+  "distinct_calls": 4,
+  "total_calls": 3,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 10,
+  "cpsa_goal_time": 0.204,
+  "cpsa_replay_time": 0.256,
+  "wall": 0.486,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

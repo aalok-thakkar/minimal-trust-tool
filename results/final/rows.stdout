@@ -1,0 +1,36 @@
+row                mode      shrink W                                            H                              calls query   shr |H|+|W|   states  brute    time(s)
+signed CR          as_found  false  {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              5     5     0      3    25981   true     0.0364
+signed CR          as_found  true   {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              6     3     4      3    32162   true     0.0431
+signed CR          pruned    false  {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              3     3     0      3    19778   true     0.0291  (Python reference mode)
+signed CR          pruned    true   {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              4     3     1      3    25959   true     0.0360
+signed CR          least     false  {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              3     3     0      3    57464   true     0.0758
+signed CR          least     true   {Non(sk_A), Unq(N)}                          {Non(sk_A)}; {Unq(N)}              4     3     1      3    63645   true     0.0825
+two-key variant    as_found  false  {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       4     4     0      4    18565   true     0.0325
+two-key variant    as_found  true   {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       5     4     3      4    24746   true     0.0393
+two-key variant    pruned    false  {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       4     4     0      4    18565   true     0.0326  (Python reference mode)
+two-key variant    pruned    true   {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       5     4     3      4    24746   true     0.0394
+two-key variant    least     false  {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       4     4     0      4    53854   true     0.0930
+two-key variant    least     true   {Non(k1), Unq(N)}; {Non(k2), Unq(N)}         {Unq(N)}; {Non(k1), Non(k2)}       5     4     3      4    60035   true     0.0997
+Needham-Schroeder  as_found  false  false                                        {{}}                               2     2     0      1      851   true     0.0008  (Python reference mode)
+Needham-Schroeder  as_found  true   false                                        {{}}                               2     1     1      1      131   true     0.0002
+Needham-Schroeder  pruned    false  false                                        {{}}                               2     2     0      1      851   true     0.0008
+Needham-Schroeder  pruned    true   false                                        {{}}                               2     1     1      1      131   true     0.0002
+Needham-Schroeder  least     false  false                                        {{}}                               1     1     0      1     1581   true     0.0014
+Needham-Schroeder  least     true   false                                        {{}}                               1     1     0      1     1581   true     0.0014
+NSPK with channels as_found  false  {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           4     4     0      3     3005   true     0.0041
+NSPK with channels as_found  true   {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           6     3     3      3     2581   true     0.0033
+NSPK with channels pruned    false  {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           4     4     0      3     3005   true     0.0041
+NSPK with channels pruned    true   {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           6     3     3      3     2581   true     0.0033
+NSPK with channels least     false  {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           3     3     0      3     5142   true     0.0067  (Python reference mode)
+NSPK with channels least     true   {auth(A->B)}; {conf(B->A)}                   {auth(A->B), conf(B->A)}           5     3     2      3     5438   true     0.0069
+Lowe's fix (NSL)   as_found  false  {Non(sk_A)}                                  {Non(sk_A)}                        2     2     0      2     1544   true     0.0015  (Python reference mode)
+Lowe's fix (NSL)   as_found  true   {Non(sk_A)}                                  {Non(sk_A)}                        3     2     1      2     1770   true     0.0018
+Lowe's fix (NSL)   pruned    false  {Non(sk_A)}                                  {Non(sk_A)}                        2     2     0      2     1544   true     0.0016
+Lowe's fix (NSL)   pruned    true   {Non(sk_A)}                                  {Non(sk_A)}                        3     2     1      2     1770   true     0.0018
+Lowe's fix (NSL)   least     false  {Non(sk_A)}                                  {Non(sk_A)}                        2     2     0      2     4524   true     0.0045
+Lowe's fix (NSL)   least     true   {Non(sk_A)}                                  {Non(sk_A)}                        3     2     1      2     4750   true     0.0048
+wrote results/final/rows.csv (30 rows)
+signed CR, empty trust, first witness as found: stops = {Non(sk_A), Non(sk_B)}
+  [N] Prov(A,I) recv N_old; Prov(A,I) send [<N_old, <A, I>>]_sk_A; Chal(A,B) send N_a; Chal(A,B) recv [<N_a, <B, A>>]_sk_B; Prov(B,A) recv N_a; Prov(B,A) send [<N_a, <B, A>>]_sk_B; Prov(A,B) recv N_a; Prov(A,B) send [<N_a, <A, B>>]_sk_A; Chal(B,A)* send N; Chal(B,A)* recv [<N, <A, B>>]_sk_A
+  pruned: stops = {Non(sk_A)}
+  [N] Chal(B,A)* send N; Chal(B,A)* recv [<N, <A, B>>]_sk_A

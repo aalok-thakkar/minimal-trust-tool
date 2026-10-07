@@ -1,0 +1,326 @@
+{
+ "name": "blanchet",
+ "meta": {
+  "name": [
+   "blanchet"
+  ],
+  "source": [
+   "tst/blanchet.scm (defprotocol blanchet), protocol text unchanged (comments dropped)"
+  ],
+  "goal": [
+   "written: secrecy of d from the responder's point of view (the shipped skeleton 4 for this protocol, resp + deflistener d, as a goal)"
+  ],
+  "note": [
+   "secondary candidate (not on the preferred list); admitted for the secrecy goal class, see MANIFEST.md"
+  ]
+ },
+ "U": {
+  "non_privk_a": "(non (privk a))",
+  "non_privk_b": "(non (privk b))",
+  "uniq_s": "(uniq s)",
+  "uniq_d": "(uniq d)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a"
+    ],
+    "time": 0.0172,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_s"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_d"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b"
+    ],
+    "time": 0.0175,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_s"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_d"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_s"
+    ],
+    "time": 0.017,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_d"
+    ],
+    "time": 0.0179,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_s",
+     "uniq_d"
+    ],
+    "time": 0.0183,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_s"
+    ],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_d"
+    ],
+    "time": 0.018,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "uniq_s",
+     "uniq_d"
+    ],
+    "time": 0.0182,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_s",
+     "uniq_d"
+    ],
+    "time": 0.0178,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_a",
+     "non_privk_b",
+     "uniq_s",
+     "uniq_d"
+    ],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 3,
+    "warnings": []
+   }
+  ],
+  "n_points": 16,
+  "all_complete": true,
+  "total_time": 0.282,
+  "max_time": 0.018,
+  "monotone": true,
+  "n_sufficient": 0,
+  "W": [],
+  "A": [
+   []
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [],
+  "H": [
+   []
+  ],
+  "distinct_calls": 4,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 12,
+  "cpsa_goal_time": 0.071,
+  "cpsa_replay_time": 0.208,
+  "wall": 0.288,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [],
+  "H": [
+   []
+  ],
+  "distinct_calls": 3,
+  "total_calls": 1,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 5,
+  "cpsa_goal_time": 0.053,
+  "cpsa_replay_time": 0.085,
+  "wall": 0.143,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [],
+  "H": [
+   []
+  ],
+  "distinct_calls": 4,
+  "total_calls": 4,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 4,
+  "cpsa_replay_runs": 12,
+  "cpsa_goal_time": 0.07,
+  "cpsa_replay_time": 0.209,
+  "wall": 0.287,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [],
+  "H": [
+   []
+  ],
+  "distinct_calls": 3,
+  "total_calls": 1,
+  "shrink_calls": 2,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 5,
+  "cpsa_goal_time": 0.053,
+  "cpsa_replay_time": 0.087,
+  "wall": 0.144,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

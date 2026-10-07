@@ -1,0 +1,32 @@
+row                mode      inst earlier status   W                                             calls     states max_states   time(s) W changed
+signed CR          pruned       1 true    ok       {Non(sk_A), Unq(N)}                               3       3202       1601     0.011 reference
+signed CR          pruned       2 true    ok       {Non(sk_A), Unq(N)}                               3    3309263    1654631    35.253 false
+signed CR          pruned       3 true    timeout  -                                                 -          -          -   600.020 -
+signed CR          pruned       1 false   ok       {Non(sk_A)}                                       2        976        968     0.004 true
+signed CR          pruned       2 false   ok       {Non(sk_A)}                                       2     799929     799914     7.557 true
+signed CR          pruned       3 false   timeout  -                                                 -          -          -   600.010 -
+two-key variant    pruned       1 true    ok       {Non(k1), Unq(N)}; {Non(k2), Unq(N)}              4       3247       1085     0.014 reference
+two-key variant    pruned       2 true    ok       {Non(k1), Unq(N)}; {Non(k2), Unq(N)}              4    2327293     775768    29.720 false
+two-key variant    pruned       3 true    timeout  -                                                 -          -          -   600.008 -
+two-key variant    pruned       1 false   ok       {Non(k1)}; {Non(k2)}                              3       1324        658     0.005 true
+two-key variant    pruned       2 false   ok       {Non(k1)}; {Non(k2)}                              3     759831     379908     8.684 true
+two-key variant    pruned       3 false   timeout  -                                                 -          -          -   600.001 -
+Needham-Schroeder  pruned       1 false   ok       false                                             2        149        146     0.001 reference
+Needham-Schroeder  pruned       2 false   ok       false                                             2        414        405     0.002 false
+Needham-Schroeder  pruned       3 false   ok       false                                             2        863        848     0.004 false
+Needham-Schroeder  pruned       1 true    ok       false                                             2        412        409     0.001 false
+Needham-Schroeder  pruned       2 true    ok       false                                             2        863        854     0.003 false
+Needham-Schroeder  pruned       3 true    ok       false                                             2       1546       1531     0.007 false
+NSPK with channels pruned       1 false   ok       {auth(A->B)}; {conf(B->A)}                        4        545        286     0.002 reference
+NSPK with channels pruned       2 false   ok       {conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}      7     482837     404616     3.476 true
+NSPK with channels pruned       3 false   timeout  -                                                 -          -          -   600.009 -
+NSPK with channels pruned       1 true    ok       {auth(A->B)}; {conf(B->A)}                        4       1226        636     0.005 false
+NSPK with channels pruned       2 true    ok       {conf(B->A)}; {Non(sk_A), auth(A->B)}; {auth(A->B), auth(B->A)}      7    1570351    1406652    13.954 true
+NSPK with channels pruned       3 true    timeout  -                                                 -          -          -   600.012 -
+Lowe's fix (NSL)   pruned       1 false   ok       {Non(sk_A)}                                       2        289        286     0.001 reference
+Lowe's fix (NSL)   pruned       2 false   ok       {Non(sk_A)}                                       2     404625     404616     2.537 false
+Lowe's fix (NSL)   pruned       3 false   timeout  -                                                 -          -          -   600.007 -
+Lowe's fix (NSL)   pruned       1 true    ok       {Non(sk_A)}                                       2        639        636     0.002 false
+Lowe's fix (NSL)   pruned       2 true    ok       {Non(sk_A)}                                       2    1406661    1406652    10.880 false
+Lowe's fix (NSL)   pruned       3 true    timeout  -                                                 -          -          -   600.004 -
+wrote results/final/bound.csv (30 rows)

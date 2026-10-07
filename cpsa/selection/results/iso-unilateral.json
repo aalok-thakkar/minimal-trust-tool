@@ -1,0 +1,359 @@
+{
+ "name": "iso-unilateral",
+ "meta": {
+  "name": [
+   "iso-unilateral"
+  ],
+  "excluded": [
+   "t1, t2, t3 are the ISO Text fields, not nonces; under the rule U = {non_privk_b}, |U| = 1. This file keeps the first-pass U (sort rule)."
+  ],
+  "source": [
+   "tst/unilateral.scm (defprotocol iso-unilateral), protocol text unchanged"
+  ],
+  "goal": [
+   "shipped: first defgoal iso-unilateral in tst/unilateral.scm, hypothesis fact (non (privk b)) replaced by the trust placeholder"
+  ],
+  "note": [
+   "role declarations uniq-orig na [resp] and uniq-orig nb [init] stay in sigma"
+  ]
+ },
+ "U": {
+  "non_privk_b": "(non (privk b))",
+  "uniq_t1": "(uniq t1)",
+  "uniq_t2": "(uniq t2)",
+  "uniq_t3": "(uniq t3)"
+ },
+ "cpsa": "",
+ "timeout_per_run": 60,
+ "lattice": {
+  "points": [
+   {
+    "T": [],
+    "time": 0.0177,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t1"
+    ],
+    "time": 0.0174,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t2"
+    ],
+    "time": 0.0151,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t3"
+    ],
+    "time": 0.0174,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t1"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t2"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t3"
+    ],
+    "time": 0.0175,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t1",
+     "uniq_t2"
+    ],
+    "time": 0.0175,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t1",
+     "uniq_t3"
+    ],
+    "time": 0.0176,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t2",
+     "uniq_t3"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t1",
+     "uniq_t2"
+    ],
+    "time": 0.0172,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t1",
+     "uniq_t3"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t2",
+     "uniq_t3"
+    ],
+    "time": 0.0175,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   },
+   {
+    "T": [
+     "uniq_t1",
+     "uniq_t2",
+     "uniq_t3"
+    ],
+    "time": 0.0172,
+    "timeout": false,
+    "complete": true,
+    "verdict": false,
+    "shapes": 1,
+    "failing_shapes": 1,
+    "skeletons": 1,
+    "warnings": []
+   },
+   {
+    "T": [
+     "non_privk_b",
+     "uniq_t1",
+     "uniq_t2",
+     "uniq_t3"
+    ],
+    "time": 0.0173,
+    "timeout": false,
+    "complete": true,
+    "verdict": true,
+    "shapes": 1,
+    "failing_shapes": 0,
+    "skeletons": 2,
+    "warnings": []
+   }
+  ],
+  "n_points": 16,
+  "all_complete": true,
+  "total_time": 0.277,
+  "max_time": 0.018,
+  "monotone": true,
+  "n_sufficient": 8,
+  "W": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "A": [
+   [
+    "non_privk_b"
+   ]
+  ]
+ },
+ "loop_ref_as_found": {
+  "W": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.035,
+  "cpsa_replay_time": 0.069,
+  "wall": 0.107,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_ref_shrink": {
+  "W": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.052,
+  "cpsa_replay_time": 0.069,
+  "wall": 0.124,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_as_found": {
+  "W": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "distinct_calls": 2,
+  "total_calls": 2,
+  "shrink_calls": 0,
+  "cpsa_goal_runs": 2,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.034,
+  "cpsa_replay_time": 0.069,
+  "wall": 0.106,
+  "agrees": true,
+  "H_equals_A": true
+ },
+ "loop_fixed_shrink": {
+  "W": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "H": [
+   [
+    "non_privk_b"
+   ]
+  ],
+  "distinct_calls": 3,
+  "total_calls": 2,
+  "shrink_calls": 1,
+  "cpsa_goal_runs": 3,
+  "cpsa_replay_runs": 4,
+  "cpsa_goal_time": 0.051,
+  "cpsa_replay_time": 0.068,
+  "wall": 0.123,
+  "agrees": true,
+  "H_equals_A": true
+ }
+}

@@ -4,7 +4,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 The OCaml tool for the paper *Trust a Few: The Weakest Assumptions a Protocol Needs*
-(Bhumika Mittal and Aalok Thakkar; extended version on arXiv; conference version
+(Bhumika Mittal and Aalok Thakkar; extended version
+[arXiv:2610.09730](https://arxiv.org/abs/2610.09730); conference version
 *The Trust a Protocol Needs*, ICISS 2026).
 
 A security protocol achieves its goal only under assumptions: some keys are not
@@ -264,7 +265,7 @@ witnesses.
   author        = {Bhumika Mittal and Aalok Thakkar},
   title         = {Trust a Few: The Weakest Assumptions a Protocol Needs},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
+  eprint        = {2610.09730},
   archivePrefix = {arXiv},
   primaryClass  = {cs.CR}
 }
@@ -277,8 +278,8 @@ witnesses.
 }
 ```
 
-The arXiv identifier is a placeholder until the preprint is posted. `CITATION.cff` has
-the same information.
+The preprint is at <https://arxiv.org/abs/2610.09730>. `CITATION.cff` has the same
+information.
 
 ## License
 

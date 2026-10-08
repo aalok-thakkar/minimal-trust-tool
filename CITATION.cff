@@ -21,8 +21,8 @@ preferred-citation:
   journal: "arXiv preprint"
   identifiers:
     - type: other
-      value: "arXiv:XXXX.XXXXX"
-      description: "arXiv identifier (placeholder until the preprint is posted)"
+      value: "arXiv:2610.09730"
+      description: "arXiv identifier"
 references:
   - type: conference-paper
     title: "The Trust a Protocol Needs"
